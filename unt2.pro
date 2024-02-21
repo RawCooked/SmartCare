@@ -17,12 +17,14 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     connexion.cpp \
+    employe.cpp \
     main.cpp \
     mainwindow.cpp \
     traitement.cpp
 
 HEADERS += \
     connexion.h \
+    employe.h \
     mainwindow.h \
     traitement.h
 FORMS += \

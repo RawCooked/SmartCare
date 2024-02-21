@@ -111,9 +111,9 @@ void MainWindow::on_pushButton_9_clicked()
 
 void MainWindow::on_pushButton_14_clicked()
 {
-    Connexion c;
-    Traitement T(0,ui->TypeTrait->text(),ui->DateTrait->date(),ui->DescriptionTrait->text(),ui->PrixTrait->value());
-    c.addTrait(T);
+    //Connexion c;
+    //Traitement T(0,ui->TypeTrait->text(),ui->DateTrait->date(),ui->DescriptionTrait->text(),ui->PrixTrait->value());
+    //c.addTrait(T);
 }
 
 void MainWindow::on_pushButton_59_clicked()

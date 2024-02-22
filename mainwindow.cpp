@@ -1,6 +1,8 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "connexion.h"
+#include <QMessageBox>
+
 
 
 
@@ -30,6 +32,8 @@ void MainWindow::changeWidget(int i){
     ui->Atelier->hide();
     ui->Employe->hide();
     ui->Rdv->hide();
+    ui->widget_17->hide();
+
 
     switch (i){
     case 1 :
@@ -55,6 +59,7 @@ void MainWindow::changeWidget(int i){
         ui->Employe->show();
         break;
     case 8 :
+        ui->widget_17->show();
         ui->Rdv->show();
         break;
     default:
@@ -100,7 +105,9 @@ void MainWindow::on_pushButton_8_clicked()
 
 void MainWindow::on_pushButton_5_clicked()
 {
+    ui->widget_17->show();
     changeWidget(8);
+
 }
 
 void MainWindow::on_pushButton_9_clicked()
@@ -125,4 +132,40 @@ void MainWindow::on_pushButton_24_clicked()
 {
     Connexion c;
     c.deleteTrait(ui->PrixTrait_4->value());
+}
+
+void MainWindow::on_pushButton_15_clicked()
+{
+    ui->widget_16->show();
+    ui->widget_19->hide();
+    ui->widget_40->hide();
+
+
+}
+
+void MainWindow::on_pushButton_21_clicked()
+{
+    QString username = ui->lineEdit->text();
+    QString password = ui->lineEdit_2->text();
+    if(username == "kousay" && password=="ls1"){
+        QMessageBox::information(this,"sign in","usename and password are correct" );
+        ui->widget_17->hide();
+    }
+    else
+        QMessageBox::warning(this,"sign in","usename and password are not correct");
+
+}
+
+void MainWindow::on_pushButton_27_clicked()
+{
+    ui->widget_17->show();
+
+}
+
+void MainWindow::on_pushButton_28_clicked()
+{
+    ui->widget_42->hide();
+    ui->widget_19->show();
+    ui->widget_40->show();
+
 }

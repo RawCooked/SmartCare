@@ -1,6 +1,7 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
-
+#include "rendez_vous.h"
+#include <QMediaPlayer>
 #include <QMainWindow>
 
 QT_BEGIN_NAMESPACE
@@ -57,7 +58,30 @@ private slots:
 
     void on_pushButton_28_clicked();
 
+    void on_quitrdv_clicked();
+
+    void on_pushButton_22_clicked();
+
+    void on_btajoutRdv_clicked();
+
+    void on_pushButton_40_clicked();
+
+    void on_pushButton_50_clicked();
+
+    void on_btsuppRdv_clicked();
+
+    void on_btmdfrdv_clicked();
+
+    void on_pushButton_58_clicked();
+
+    void on_bttrirdv_clicked();
+
+    void on_btajoutRdv_2_clicked();
+
 private:
     Ui::MainWindow *ui;
+    QMediaPlayer *click;
+    Rdv r;
+
 };
 #endif // MAINWINDOW_H

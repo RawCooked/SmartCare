@@ -11,7 +11,7 @@ bool Connexion::ouvrirConnexion()
     db = QSqlDatabase::addDatabase("QODBC");
     db.setDatabaseName("test-bd");
     db.setUserName("system");
-    db.setPassword("123");
+    db.setPassword("cscorner");
 
     if (db.open()) return true;
     return false;

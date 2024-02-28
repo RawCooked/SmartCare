@@ -1,4 +1,5 @@
-QT       += core gui sql
+QT       += core gui sql multimedia widgets printsupport
+
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -19,11 +20,13 @@ SOURCES += \
     connexion.cpp \
     main.cpp \
     mainwindow.cpp \
+    rendez_vous.cpp \
     traitement.cpp
 
 HEADERS += \
     connexion.h \
     mainwindow.h \
+    rendez_vous.h \
     traitement.h
 FORMS += \
     mainwindow.ui

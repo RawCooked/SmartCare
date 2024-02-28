@@ -1906,7 +1906,7 @@
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>../../Desktop/feather/home.svg</normaloff>../../Desktop/feather/home.svg</iconset>
+          <normaloff>../../../../Downloads/feather/feather/home.svg</normaloff>../../../../Downloads/feather/feather/home.svg</iconset>
         </property>
         <property name="checkable">
          <bool>false</bool>
@@ -2383,7 +2383,7 @@
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>../../Desktop/feather/user-check.svg</normaloff>../../Desktop/feather/user-check.svg</iconset>
+          <normaloff>../../../../Downloads/feather/feather/user-check.svg</normaloff>../../../../Downloads/feather/feather/user-check.svg</iconset>
         </property>
         <property name="flat">
          <bool>true</bool>
@@ -2845,7 +2845,7 @@
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>../../Desktop/feather/user.svg</normaloff>../../Desktop/feather/user.svg</iconset>
+          <normaloff>../../../../Downloads/feather/feather/user.svg</normaloff>../../../../Downloads/feather/feather/user.svg</iconset>
         </property>
         <property name="flat">
          <bool>true</bool>
@@ -3307,7 +3307,7 @@
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>../../Desktop/feather/smile.svg</normaloff>../../Desktop/feather/smile.svg</iconset>
+          <normaloff>../../../../Downloads/feather/feather/smile.svg</normaloff>../../../../Downloads/feather/feather/smile.svg</iconset>
         </property>
         <property name="flat">
          <bool>true</bool>
@@ -3769,7 +3769,7 @@
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>../../Desktop/feather/activity.svg</normaloff>../../Desktop/feather/activity.svg</iconset>
+          <normaloff>../../../../Downloads/feather/feather/activity.svg</normaloff>../../../../Downloads/feather/feather/activity.svg</iconset>
         </property>
         <property name="flat">
          <bool>true</bool>
@@ -4231,7 +4231,7 @@
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>../../Desktop/feather/calendar.svg</normaloff>../../Desktop/feather/calendar.svg</iconset>
+          <normaloff>../../../../Downloads/feather/feather/calendar.svg</normaloff>../../../../Downloads/feather/feather/calendar.svg</iconset>
         </property>
         <property name="flat">
          <bool>true</bool>
@@ -4693,7 +4693,7 @@
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>../../Desktop/feather/anchor.svg</normaloff>../../Desktop/feather/anchor.svg</iconset>
+          <normaloff>../../../../Downloads/feather/feather/anchor.svg</normaloff>../../../../Downloads/feather/feather/anchor.svg</iconset>
         </property>
         <property name="flat">
          <bool>true</bool>
@@ -5155,7 +5155,7 @@
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>../../Desktop/feather/airplay.svg</normaloff>../../Desktop/feather/airplay.svg</iconset>
+          <normaloff>../../../../Downloads/feather/feather/airplay.svg</normaloff>../../../../Downloads/feather/feather/airplay.svg</iconset>
         </property>
         <property name="flat">
          <bool>true</bool>
@@ -6180,7 +6180,7 @@ p, li { white-space: pre-wrap; }
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>../../Desktop/feather/layers.svg</normaloff>../../Desktop/feather/layers.svg</iconset>
+          <normaloff>../../../../Downloads/feather/feather/layers.svg</normaloff>../../../../Downloads/feather/feather/layers.svg</iconset>
         </property>
         <property name="flat">
          <bool>true</bool>
@@ -6645,7 +6645,7 @@ p, li { white-space: pre-wrap; }
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>../../Desktop/feather/navigation.svg</normaloff>../../Desktop/feather/navigation.svg</iconset>
+          <normaloff>../../../../Downloads/feather/feather/navigation-2.svg</normaloff>../../../../Downloads/feather/feather/navigation-2.svg</iconset>
         </property>
         <property name="flat">
          <bool>true</bool>
@@ -7110,7 +7110,7 @@ p, li { white-space: pre-wrap; }
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>../../Desktop/feather/search.svg</normaloff>../../Desktop/feather/search.svg</iconset>
+          <normaloff>../../../../Downloads/feather/feather/search.svg</normaloff>../../../../Downloads/feather/feather/search.svg</iconset>
         </property>
         <property name="flat">
          <bool>true</bool>
@@ -7575,7 +7575,7 @@ p, li { white-space: pre-wrap; }
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>../../Desktop/feather/calendar.svg</normaloff>../../Desktop/feather/calendar.svg</iconset>
+          <normaloff>../../../../Downloads/feather/feather/calendar.svg</normaloff>../../../../Downloads/feather/feather/calendar.svg</iconset>
         </property>
         <property name="flat">
          <bool>true</bool>
@@ -8040,7 +8040,7 @@ p, li { white-space: pre-wrap; }
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>../../Desktop/feather/hard-drive.svg</normaloff>../../Desktop/feather/hard-drive.svg</iconset>
+          <normaloff>../../../../Downloads/feather/feather/hard-drive.svg</normaloff>../../../../Downloads/feather/feather/hard-drive.svg</iconset>
         </property>
         <property name="flat">
          <bool>true</bool>
@@ -8568,7 +8568,7 @@ p, li { white-space: pre-wrap; }
      <widget class="QWidget" name="T_General">
       <attribute name="icon">
        <iconset>
-        <normaloff>../../Desktop/feather/table.svg</normaloff>../../Desktop/feather/table.svg</iconset>
+        <normaloff>../../../../Downloads/feather/feather/table.svg</normaloff>../../../../Downloads/feather/feather/table.svg</iconset>
       </attribute>
       <attribute name="title">
        <string>General</string>
@@ -10011,13 +10011,13 @@ p, li { white-space: pre-wrap; }
         <property name="autoFillBackground">
          <bool>true</bool>
         </property>
-        <widget class="QListView" name="listView">
+        <widget class="QListView" name="tab_emp0">
          <property name="geometry">
           <rect>
            <x>10</x>
            <y>40</y>
            <width>291</width>
-           <height>441</height>
+           <height>421</height>
           </rect>
          </property>
         </widget>
@@ -10034,7 +10034,7 @@ p, li { white-space: pre-wrap; }
           <string>Employés</string>
          </property>
         </widget>
-        <widget class="QPushButton" name="pushButton_9">
+        <widget class="QPushButton" name="refresh_emp0">
          <property name="geometry">
           <rect>
            <x>270</x>
@@ -10493,7 +10493,7 @@ p, li { white-space: pre-wrap; }
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../../Desktop/feather/refresh-ccw.svg</normaloff>../../Desktop/feather/refresh-ccw.svg</iconset>
+           <normaloff>../../../../Downloads/feather/feather/refresh-ccw.svg</normaloff>../../../../Downloads/feather/feather/refresh-ccw.svg</iconset>
          </property>
          <property name="checkable">
           <bool>false</bool>
@@ -10508,13 +10508,26 @@ p, li { white-space: pre-wrap; }
           <bool>true</bool>
          </property>
         </widget>
+        <widget class="QPushButton" name="Exporter_pdf_emp">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>470</y>
+           <width>261</width>
+           <height>28</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Exporter pdf</string>
+         </property>
+        </widget>
        </widget>
       </widget>
      </widget>
      <widget class="QWidget" name="T_Ajouter">
       <attribute name="icon">
        <iconset>
-        <normaloff>../../Desktop/feather/arrow-down.svg</normaloff>../../Desktop/feather/arrow-down.svg</iconset>
+        <normaloff>../../../../Downloads/feather/feather/arrow-down.svg</normaloff>../../../../Downloads/feather/feather/arrow-down.svg</iconset>
       </attribute>
       <attribute name="title">
        <string>Ajouter</string>
@@ -11433,7 +11446,7 @@ p, li { white-space: pre-wrap; }
            <x>10</x>
            <y>10</y>
            <width>361</width>
-           <height>168</height>
+           <height>171</height>
           </rect>
          </property>
          <layout class="QFormLayout" name="formLayout">
@@ -11452,7 +11465,7 @@ p, li { white-space: pre-wrap; }
            </widget>
           </item>
           <item row="2" column="0">
-           <widget class="QLineEdit" name="TypeTrait">
+           <widget class="QLineEdit" name="NomEmp">
             <property name="placeholderText">
              <string>Nom de l'employé</string>
             </property>
@@ -11462,7 +11475,7 @@ p, li { white-space: pre-wrap; }
            </widget>
           </item>
           <item row="2" column="1">
-           <widget class="QLineEdit" name="TypeTrait_2">
+           <widget class="QLineEdit" name="PrenomEmp">
             <property name="placeholderText">
              <string>Prenom de l'employé</string>
             </property>
@@ -11486,7 +11499,7 @@ p, li { white-space: pre-wrap; }
            </widget>
           </item>
           <item row="4" column="0">
-           <widget class="QComboBox" name="comboBox">
+           <widget class="QComboBox" name="EtatEmp">
             <item>
              <property name="text">
               <string>Docteur</string>
@@ -11500,28 +11513,7 @@ p, li { white-space: pre-wrap; }
            </widget>
           </item>
           <item row="4" column="1">
-           <widget class="QSpinBox" name="PrixTrait"/>
-          </item>
-          <item row="6" column="1">
-           <widget class="QPushButton" name="pushButton_14">
-            <property name="text">
-             <string/>
-            </property>
-            <property name="icon">
-             <iconset>
-              <normaloff>../../Desktop/feather/download-cloud.svg</normaloff>../../Desktop/feather/download-cloud.svg</iconset>
-            </property>
-            <property name="flat">
-             <bool>true</bool>
-            </property>
-           </widget>
-          </item>
-          <item row="7" column="0">
-           <widget class="QRadioButton" name="radioButton">
-            <property name="text">
-             <string>Homme</string>
-            </property>
-           </widget>
+           <widget class="QSpinBox" name="salaireEmp"/>
           </item>
           <item row="6" column="0">
            <widget class="QLabel" name="label_9">
@@ -11530,10 +11522,31 @@ p, li { white-space: pre-wrap; }
             </property>
            </widget>
           </item>
+          <item row="7" column="0">
+           <widget class="QRadioButton" name="Homme">
+            <property name="text">
+             <string>Homme</string>
+            </property>
+           </widget>
+          </item>
           <item row="7" column="1">
-           <widget class="QRadioButton" name="radioButton_2">
+           <widget class="QRadioButton" name="Femme">
             <property name="text">
              <string>Femme</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="1">
+           <widget class="QPushButton" name="pushButton_14">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>../../../../Downloads/feather/feather/download-cloud.svg</normaloff>../../../../Downloads/feather/feather/download-cloud.svg</iconset>
+            </property>
+            <property name="flat">
+             <bool>true</bool>
             </property>
            </widget>
           </item>
@@ -11994,7 +12007,7 @@ p, li { white-space: pre-wrap; }
         <property name="autoFillBackground">
          <bool>true</bool>
         </property>
-        <widget class="QListView" name="listView_9">
+        <widget class="QListView" name="tab_emp">
          <property name="geometry">
           <rect>
            <x>10</x>
@@ -12017,7 +12030,7 @@ p, li { white-space: pre-wrap; }
           <string>Employés</string>
          </property>
         </widget>
-        <widget class="QPushButton" name="pushButton_25">
+        <widget class="QPushButton" name="refresh_emp">
          <property name="geometry">
           <rect>
            <x>270</x>
@@ -12476,7 +12489,7 @@ p, li { white-space: pre-wrap; }
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../../Desktop/feather/refresh-ccw.svg</normaloff>../../Desktop/feather/refresh-ccw.svg</iconset>
+           <normaloff>../../../../Downloads/feather/feather/refresh-ccw.svg</normaloff>../../../../Downloads/feather/feather/refresh-ccw.svg</iconset>
          </property>
          <property name="checkable">
           <bool>false</bool>
@@ -12492,12 +12505,25 @@ p, li { white-space: pre-wrap; }
          </property>
         </widget>
        </widget>
+       <widget class="QPushButton" name="Ajouter_emp">
+        <property name="geometry">
+         <rect>
+          <x>80</x>
+          <y>230</y>
+          <width>241</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Ajouter</string>
+        </property>
+       </widget>
       </widget>
      </widget>
      <widget class="QWidget" name="T_Supprimer">
       <attribute name="icon">
        <iconset>
-        <normaloff>../../Desktop/feather/delete.svg</normaloff>../../Desktop/feather/delete.svg</iconset>
+        <normaloff>../../../../Downloads/feather/feather/delete.svg</normaloff>../../../../Downloads/feather/feather/delete.svg</iconset>
       </attribute>
       <attribute name="title">
        <string>Supprimer</string>
@@ -12986,7 +13012,7 @@ p, li { white-space: pre-wrap; }
            </widget>
           </item>
           <item row="0" column="1">
-           <widget class="QSpinBox" name="PrixTrait_4"/>
+           <widget class="QSpinBox" name="id_emp"/>
           </item>
           <item row="1" column="1">
            <widget class="QPushButton" name="pushButton_24">
@@ -12995,7 +13021,7 @@ p, li { white-space: pre-wrap; }
             </property>
             <property name="icon">
              <iconset>
-              <normaloff>../../Desktop/feather/delete.svg</normaloff>../../Desktop/feather/delete.svg</iconset>
+              <normaloff>../../../../Downloads/feather/feather/delete.svg</normaloff>../../../../Downloads/feather/feather/delete.svg</iconset>
             </property>
             <property name="flat">
              <bool>true</bool>
@@ -13459,7 +13485,7 @@ p, li { white-space: pre-wrap; }
         <property name="autoFillBackground">
          <bool>true</bool>
         </property>
-        <widget class="QListView" name="listView_10">
+        <widget class="QListView" name="tab_emp2">
          <property name="geometry">
           <rect>
            <x>10</x>
@@ -13482,7 +13508,7 @@ p, li { white-space: pre-wrap; }
           <string>Employés</string>
          </property>
         </widget>
-        <widget class="QPushButton" name="pushButton_26">
+        <widget class="QPushButton" name="refresh_emp2">
          <property name="geometry">
           <rect>
            <x>270</x>
@@ -13941,7 +13967,7 @@ p, li { white-space: pre-wrap; }
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../../Desktop/feather/refresh-ccw.svg</normaloff>../../Desktop/feather/refresh-ccw.svg</iconset>
+           <normaloff>../../../../Downloads/feather/feather/refresh-ccw.svg</normaloff>../../../../Downloads/feather/feather/refresh-ccw.svg</iconset>
          </property>
          <property name="checkable">
           <bool>false</bool>
@@ -13957,12 +13983,25 @@ p, li { white-space: pre-wrap; }
          </property>
         </widget>
        </widget>
+       <widget class="QPushButton" name="supprimer_emp">
+        <property name="geometry">
+         <rect>
+          <x>80</x>
+          <y>120</y>
+          <width>281</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Supprimer</string>
+        </property>
+       </widget>
       </widget>
      </widget>
      <widget class="QWidget" name="T_Modifier">
       <attribute name="icon">
        <iconset>
-        <normaloff>../../Desktop/feather/copy.svg</normaloff>../../Desktop/feather/copy.svg</iconset>
+        <normaloff>../../../../Downloads/feather/feather/copy.svg</normaloff>../../../../Downloads/feather/feather/copy.svg</iconset>
       </attribute>
       <attribute name="title">
        <string>Modifier</string>
@@ -14875,7 +14914,7 @@ p, li { white-space: pre-wrap; }
         <property name="autoFillBackground">
          <bool>true</bool>
         </property>
-        <widget class="QListView" name="listView_11">
+        <widget class="QListView" name="tab_emp3">
          <property name="geometry">
           <rect>
            <x>10</x>
@@ -14898,7 +14937,7 @@ p, li { white-space: pre-wrap; }
           <string>Employés</string>
          </property>
         </widget>
-        <widget class="QPushButton" name="pushButton_30">
+        <widget class="QPushButton" name="refresh_emp3">
          <property name="geometry">
           <rect>
            <x>270</x>
@@ -15357,7 +15396,7 @@ p, li { white-space: pre-wrap; }
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../../Desktop/feather/refresh-ccw.svg</normaloff>../../Desktop/feather/refresh-ccw.svg</iconset>
+           <normaloff>../../../../Downloads/feather/feather/refresh-ccw.svg</normaloff>../../../../Downloads/feather/feather/refresh-ccw.svg</iconset>
          </property>
          <property name="checkable">
           <bool>false</bool>
@@ -15845,7 +15884,7 @@ p, li { white-space: pre-wrap; }
            </widget>
           </item>
           <item row="0" column="1">
-           <widget class="QSpinBox" name="PrixTrait_8"/>
+           <widget class="QSpinBox" name="Ide_modifier"/>
           </item>
          </layout>
         </widget>
@@ -16329,7 +16368,7 @@ p, li { white-space: pre-wrap; }
            </widget>
           </item>
           <item row="2" column="0">
-           <widget class="QLineEdit" name="TypeTrait_3">
+           <widget class="QLineEdit" name="NomEmp_modifier">
             <property name="placeholderText">
              <string>Nom de l'employé</string>
             </property>
@@ -16339,7 +16378,7 @@ p, li { white-space: pre-wrap; }
            </widget>
           </item>
           <item row="2" column="1">
-           <widget class="QLineEdit" name="TypeTrait_4">
+           <widget class="QLineEdit" name="PrenomEmp_modifier">
             <property name="placeholderText">
              <string>Prenom de l'employé</string>
             </property>
@@ -16363,7 +16402,7 @@ p, li { white-space: pre-wrap; }
            </widget>
           </item>
           <item row="4" column="0">
-           <widget class="QComboBox" name="comboBox_2">
+           <widget class="QComboBox" name="etatEmp_modifier">
             <item>
              <property name="text">
               <string>Docteur</string>
@@ -16377,7 +16416,7 @@ p, li { white-space: pre-wrap; }
            </widget>
           </item>
           <item row="4" column="1">
-           <widget class="QSpinBox" name="PrixTrait_2"/>
+           <widget class="QSpinBox" name="salaireEmp_modifier"/>
           </item>
           <item row="6" column="1">
            <widget class="QPushButton" name="pushButton_15">
@@ -16386,7 +16425,7 @@ p, li { white-space: pre-wrap; }
             </property>
             <property name="icon">
              <iconset>
-              <normaloff>../../Desktop/feather/download-cloud.svg</normaloff>../../Desktop/feather/download-cloud.svg</iconset>
+              <normaloff>../../../../Downloads/feather/feather/download-cloud.svg</normaloff>../../../../Downloads/feather/feather/download-cloud.svg</iconset>
             </property>
             <property name="flat">
              <bool>true</bool>
@@ -16394,7 +16433,7 @@ p, li { white-space: pre-wrap; }
            </widget>
           </item>
           <item row="7" column="0">
-           <widget class="QRadioButton" name="radioButton_3">
+           <widget class="QRadioButton" name="Homme_modifier">
             <property name="text">
              <string>Homme</string>
             </property>
@@ -16408,7 +16447,7 @@ p, li { white-space: pre-wrap; }
            </widget>
           </item>
           <item row="7" column="1">
-           <widget class="QRadioButton" name="radioButton_4">
+           <widget class="QRadioButton" name="Femme_modifier">
             <property name="text">
              <string>Femme</string>
             </property>
@@ -16416,6 +16455,19 @@ p, li { white-space: pre-wrap; }
           </item>
          </layout>
         </widget>
+       </widget>
+       <widget class="QPushButton" name="modifier_emp">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>340</y>
+          <width>331</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Modifier</string>
+        </property>
        </widget>
       </widget>
      </widget>
@@ -16436,7 +16488,7 @@ p, li { white-space: pre-wrap; }
       <enum>QTabWidget::Triangular</enum>
      </property>
      <property name="currentIndex">
-      <number>3</number>
+      <number>0</number>
      </property>
      <property name="movable">
       <bool>true</bool>
@@ -57419,7 +57471,7 @@ p, li { white-space: pre-wrap; }
       <enum>Qt::AutoText</enum>
      </property>
      <property name="pixmap">
-      <pixmap>../../Desktop/Capture-removebg-preview.png</pixmap>
+      <pixmap>../../../../Downloads/feather/feather/Capture-removebg-preview.png</pixmap>
      </property>
      <property name="scaledContents">
       <bool>true</bool>

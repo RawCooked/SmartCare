@@ -1,26 +1,38 @@
 #ifndef EMPLOYE_H
 #define EMPLOYE_H
 #include <iostream>
+#include <QString>
+#include <QSqlQueryModel>
+#include <QSqlQuery>
+#include <QListView>
 using namespace std;
 class Employe
 {
 private:
-    string nom,prenom,etat,sexe;
-    float salaire;
+    int id_emp;
+    QString nom,prenom,etat,sexe;
+    double salaire;
 public:
     Employe();
-    Employe(string,string,string,string,float);
+    Employe(int,QString,QString,QString,QString,double);
     ~Employe();
-    void set_nom(string nom){this->nom=nom;}
-    void set_prenom(string prenom){this->prenom=prenom;}
-    void set_etat(string etat){this->etat=etat;}
-    void set_salaire(float salaire){this->salaire=salaire;}
-    void set_sexe(string sexe){this->sexe=sexe;}
-    string get_nom(){return nom;}
-    string get_prenom(){return prenom;}
-    string get_etat(){return etat;}
-    float get_salaire(){return salaire;}
-    string get_sexe(){return sexe;}
+    void set_id_emp(int id){this->id_emp=id;}
+    void set_nom(QString nom){this->nom=nom;}
+    void set_prenom(QString prenom){this->prenom=prenom;}
+    void set_etat(QString etat){this->etat=etat;}
+    void set_salaire(double salaire){this->salaire=salaire;}
+    void set_sexe(QString sexe){this->sexe=sexe;}
+    int get_id_emp(){return id_emp;}
+    QString get_nom(){return nom;}
+    QString get_prenom(){return prenom;}
+    QString get_etat(){return etat;}
+    double get_salaire(){return salaire;}
+    QString get_sexe(){return sexe;}
+    bool ajouter();
+    QSqlQueryModel* afficher();
+    bool supprimer(int ID_C);
+    bool modifier(int ide,QString nom,QString prenom,QString etat,QString sexe,double salaire);
 };
-
+QVector<QStringList> selectAllEmp();
+void displayEmployesInListView(QListView* listView);
 #endif // EMPLOYE_H

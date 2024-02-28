@@ -48,6 +48,22 @@ private slots:
 
     void on_pushButton_24_clicked();
 
+    void on_Ajouter_emp_clicked();
+
+    void on_supprimer_emp_clicked();
+
+    void on_modifier_emp_clicked();
+
+    void on_refresh_emp0_clicked();
+
+    void on_refresh_emp_clicked();
+
+    void on_refresh_emp2_clicked();
+
+    void on_refresh_emp3_clicked();
+
+    void on_Exporter_pdf_emp_clicked();
+
 private:
     Ui::MainWindow *ui;
 };

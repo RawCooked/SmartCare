@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1121</width>
-    <height>724</height>
+    <width>1126</width>
+    <height>732</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -1906,7 +1906,7 @@
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>../../Desktop/feather/home.svg</normaloff>../../Desktop/feather/home.svg</iconset>
+          <normaloff>../feather/home.svg</normaloff>../feather/home.svg</iconset>
         </property>
         <property name="checkable">
          <bool>false</bool>
@@ -2383,7 +2383,7 @@
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>../../Desktop/feather/user-check.svg</normaloff>../../Desktop/feather/user-check.svg</iconset>
+          <normaloff>../feather/user-check.svg</normaloff>../feather/user-check.svg</iconset>
         </property>
         <property name="flat">
          <bool>true</bool>
@@ -2845,7 +2845,7 @@
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>../../Desktop/feather/user.svg</normaloff>../../Desktop/feather/user.svg</iconset>
+          <normaloff>../feather/user.svg</normaloff>../feather/user.svg</iconset>
         </property>
         <property name="flat">
          <bool>true</bool>
@@ -3307,7 +3307,7 @@
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>../../Desktop/feather/smile.svg</normaloff>../../Desktop/feather/smile.svg</iconset>
+          <normaloff>../feather/smile.svg</normaloff>../feather/smile.svg</iconset>
         </property>
         <property name="flat">
          <bool>true</bool>
@@ -3769,7 +3769,7 @@
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>../../Desktop/feather/activity.svg</normaloff>../../Desktop/feather/activity.svg</iconset>
+          <normaloff>../feather/activity.svg</normaloff>../feather/activity.svg</iconset>
         </property>
         <property name="flat">
          <bool>true</bool>
@@ -4231,7 +4231,7 @@
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>../../Desktop/feather/calendar.svg</normaloff>../../Desktop/feather/calendar.svg</iconset>
+          <normaloff>../feather/calendar.svg</normaloff>../feather/calendar.svg</iconset>
         </property>
         <property name="flat">
          <bool>true</bool>
@@ -4693,7 +4693,7 @@
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>../../Desktop/feather/anchor.svg</normaloff>../../Desktop/feather/anchor.svg</iconset>
+          <normaloff>../feather/anchor.svg</normaloff>../feather/anchor.svg</iconset>
         </property>
         <property name="flat">
          <bool>true</bool>
@@ -5155,7 +5155,7 @@
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>../../Desktop/feather/airplay.svg</normaloff>../../Desktop/feather/airplay.svg</iconset>
+          <normaloff>../feather/airplay.svg</normaloff>../feather/airplay.svg</iconset>
         </property>
         <property name="flat">
          <bool>true</bool>
@@ -5640,9 +5640,9 @@
           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2';&quot;&gt;stats&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2';&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt;&quot;&gt;stats&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2'; font-size:8pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
         </widget>
        </item>
@@ -5652,9 +5652,9 @@ p, li { white-space: pre-wrap; }
           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2';&quot;&gt;stats&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2';&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt;&quot;&gt;stats&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2'; font-size:8pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
         </widget>
        </item>
@@ -5664,9 +5664,9 @@ p, li { white-space: pre-wrap; }
           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2';&quot;&gt;Pat&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2';&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt;&quot;&gt;Pat&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2'; font-size:8pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
         </widget>
        </item>
@@ -5676,9 +5676,9 @@ p, li { white-space: pre-wrap; }
           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2';&quot;&gt;stats&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2';&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt;&quot;&gt;stats&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2'; font-size:8pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
         </widget>
        </item>
@@ -5688,9 +5688,9 @@ p, li { white-space: pre-wrap; }
           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2';&quot;&gt;Trait&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2';&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt;&quot;&gt;Trait&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2'; font-size:8pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
         </widget>
        </item>
@@ -5700,9 +5700,9 @@ p, li { white-space: pre-wrap; }
           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2';&quot;&gt;employés&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2';&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt;&quot;&gt;employés&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2'; font-size:8pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
         </widget>
        </item>
@@ -6180,7 +6180,7 @@ p, li { white-space: pre-wrap; }
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>../../Desktop/feather/layers.svg</normaloff>../../Desktop/feather/layers.svg</iconset>
+          <normaloff>../feather/layers.svg</normaloff>../feather/layers.svg</iconset>
         </property>
         <property name="flat">
          <bool>true</bool>
@@ -6645,7 +6645,7 @@ p, li { white-space: pre-wrap; }
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>../../Desktop/feather/navigation.svg</normaloff>../../Desktop/feather/navigation.svg</iconset>
+          <normaloff>../feather/navigation.svg</normaloff>../feather/navigation.svg</iconset>
         </property>
         <property name="flat">
          <bool>true</bool>
@@ -7110,7 +7110,7 @@ p, li { white-space: pre-wrap; }
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>../../Desktop/feather/search.svg</normaloff>../../Desktop/feather/search.svg</iconset>
+          <normaloff>../feather/search.svg</normaloff>../feather/search.svg</iconset>
         </property>
         <property name="flat">
          <bool>true</bool>
@@ -7575,7 +7575,7 @@ p, li { white-space: pre-wrap; }
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>../../Desktop/feather/calendar.svg</normaloff>../../Desktop/feather/calendar.svg</iconset>
+          <normaloff>../feather/calendar.svg</normaloff>../feather/calendar.svg</iconset>
         </property>
         <property name="flat">
          <bool>true</bool>
@@ -8040,7 +8040,7 @@ p, li { white-space: pre-wrap; }
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>../../Desktop/feather/hard-drive.svg</normaloff>../../Desktop/feather/hard-drive.svg</iconset>
+          <normaloff>../feather/hard-drive.svg</normaloff>../feather/hard-drive.svg</iconset>
         </property>
         <property name="flat">
          <bool>true</bool>
@@ -8548,7 +8548,7 @@ p, li { white-space: pre-wrap; }
       <enum>QTabWidget::Triangular</enum>
      </property>
      <property name="currentIndex">
-      <number>2</number>
+      <number>1</number>
      </property>
      <property name="elideMode">
       <enum>Qt::ElideNone</enum>
@@ -8568,7 +8568,7 @@ p, li { white-space: pre-wrap; }
      <widget class="QWidget" name="T_General">
       <attribute name="icon">
        <iconset>
-        <normaloff>../../Desktop/feather/table.svg</normaloff>../../Desktop/feather/table.svg</iconset>
+        <normaloff>../feather/table.svg</normaloff>../feather/table.svg</iconset>
       </attribute>
       <attribute name="title">
        <string>General</string>
@@ -10883,7 +10883,7 @@ p, li { white-space: pre-wrap; }
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../../Desktop/feather/refresh-ccw.svg</normaloff>../../Desktop/feather/refresh-ccw.svg</iconset>
+           <normaloff>../feather/refresh-ccw.svg</normaloff>../feather/refresh-ccw.svg</iconset>
          </property>
          <property name="checkable">
           <bool>false</bool>
@@ -10904,7 +10904,7 @@ p, li { white-space: pre-wrap; }
      <widget class="QWidget" name="T_Ajouter">
       <attribute name="icon">
        <iconset>
-        <normaloff>../../Desktop/feather/arrow-down.svg</normaloff>../../Desktop/feather/arrow-down.svg</iconset>
+        <normaloff>../feather/arrow-down.svg</normaloff>../feather/arrow-down.svg</iconset>
       </attribute>
       <attribute name="title">
        <string>Ajouter</string>
@@ -11851,9 +11851,6 @@ p, li { white-space: pre-wrap; }
             </property>
            </widget>
           </item>
-          <item row="1" column="1">
-           <widget class="QDateTimeEdit" name="DateTrait"/>
-          </item>
           <item row="2" column="0">
            <widget class="QLabel" name="label_7">
             <property name="text">
@@ -11885,12 +11882,15 @@ p, li { white-space: pre-wrap; }
             </property>
             <property name="icon">
              <iconset>
-              <normaloff>../../Desktop/feather/download-cloud.svg</normaloff>../../Desktop/feather/download-cloud.svg</iconset>
+              <normaloff>../feather/download-cloud.svg</normaloff>../feather/download-cloud.svg</iconset>
             </property>
             <property name="flat">
              <bool>true</bool>
             </property>
            </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QDateTimeEdit" name="DateTrait"/>
           </item>
          </layout>
         </widget>
@@ -12831,7 +12831,7 @@ p, li { white-space: pre-wrap; }
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../../Desktop/feather/refresh-ccw.svg</normaloff>../../Desktop/feather/refresh-ccw.svg</iconset>
+           <normaloff>../feather/refresh-ccw.svg</normaloff>../feather/refresh-ccw.svg</iconset>
          </property>
          <property name="checkable">
           <bool>false</bool>
@@ -12852,7 +12852,7 @@ p, li { white-space: pre-wrap; }
      <widget class="QWidget" name="T_Supprimer">
       <attribute name="icon">
        <iconset>
-        <normaloff>../../Desktop/feather/delete.svg</normaloff>../../Desktop/feather/delete.svg</iconset>
+        <normaloff>../feather/delete.svg</normaloff>../feather/delete.svg</iconset>
       </attribute>
       <attribute name="title">
        <string>Supprimer</string>
@@ -13350,7 +13350,7 @@ p, li { white-space: pre-wrap; }
             </property>
             <property name="icon">
              <iconset>
-              <normaloff>../../Desktop/feather/delete.svg</normaloff>../../Desktop/feather/delete.svg</iconset>
+              <normaloff>../feather/delete.svg</normaloff>../feather/delete.svg</iconset>
             </property>
             <property name="flat">
              <bool>true</bool>
@@ -14296,7 +14296,7 @@ p, li { white-space: pre-wrap; }
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../../Desktop/feather/refresh-ccw.svg</normaloff>../../Desktop/feather/refresh-ccw.svg</iconset>
+           <normaloff>../feather/refresh-ccw.svg</normaloff>../feather/refresh-ccw.svg</iconset>
          </property>
          <property name="checkable">
           <bool>false</bool>
@@ -14317,7 +14317,7 @@ p, li { white-space: pre-wrap; }
      <widget class="QWidget" name="T_Modifier">
       <attribute name="icon">
        <iconset>
-        <normaloff>../../Desktop/feather/copy.svg</normaloff>../../Desktop/feather/copy.svg</iconset>
+        <normaloff>../feather/copy.svg</normaloff>../feather/copy.svg</iconset>
       </attribute>
       <attribute name="title">
        <string>Modifier</string>
@@ -15264,9 +15264,6 @@ p, li { white-space: pre-wrap; }
             </property>
            </widget>
           </item>
-          <item row="1" column="1">
-           <widget class="QDateTimeEdit" name="DateTrait_6"/>
-          </item>
           <item row="2" column="0">
            <widget class="QLabel" name="label_37">
             <property name="text">
@@ -15298,12 +15295,15 @@ p, li { white-space: pre-wrap; }
             </property>
             <property name="icon">
              <iconset>
-              <normaloff>../../Desktop/feather/upload.svg</normaloff>../../Desktop/feather/upload.svg</iconset>
+              <normaloff>../feather/upload.svg</normaloff>../feather/upload.svg</iconset>
             </property>
             <property name="flat">
              <bool>true</bool>
             </property>
            </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QDateTimeEdit" name="DateTrait_6"/>
           </item>
          </layout>
         </widget>
@@ -16244,7 +16244,7 @@ p, li { white-space: pre-wrap; }
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../../Desktop/feather/refresh-ccw.svg</normaloff>../../Desktop/feather/refresh-ccw.svg</iconset>
+           <normaloff>../feather/refresh-ccw.svg</normaloff>../feather/refresh-ccw.svg</iconset>
          </property>
          <property name="checkable">
           <bool>false</bool>
@@ -16756,7 +16756,7 @@ p, li { white-space: pre-wrap; }
       <enum>QTabWidget::Triangular</enum>
      </property>
      <property name="currentIndex">
-      <number>3</number>
+      <number>0</number>
      </property>
      <property name="movable">
       <bool>true</bool>
@@ -16764,7 +16764,7 @@ p, li { white-space: pre-wrap; }
      <widget class="QWidget" name="tab_3">
       <attribute name="icon">
        <iconset>
-        <normaloff>../../Desktop/feather/home.svg</normaloff>../../Desktop/feather/home.svg</iconset>
+        <normaloff>../feather/home.svg</normaloff>../feather/home.svg</iconset>
       </attribute>
       <attribute name="title">
        <string>General</string>
@@ -16789,7 +16789,7 @@ p, li { white-space: pre-wrap; }
          <rect>
           <x>30</x>
           <y>30</y>
-          <width>341</width>
+          <width>371</width>
           <height>501</height>
          </rect>
         </property>
@@ -19079,7 +19079,7 @@ p, li { white-space: pre-wrap; }
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../../Desktop/feather/refresh-ccw.svg</normaloff>../../Desktop/feather/refresh-ccw.svg</iconset>
+           <normaloff>../feather/refresh-ccw.svg</normaloff>../feather/refresh-ccw.svg</iconset>
          </property>
          <property name="checkable">
           <bool>false</bool>
@@ -19100,7 +19100,7 @@ p, li { white-space: pre-wrap; }
      <widget class="QWidget" name="tab_4">
       <attribute name="icon">
        <iconset>
-        <normaloff>../../Desktop/feather/arrow-down.svg</normaloff>../../Desktop/feather/arrow-down.svg</iconset>
+        <normaloff>../feather/arrow-down.svg</normaloff>../feather/arrow-down.svg</iconset>
       </attribute>
       <attribute name="title">
        <string>Ajouter</string>
@@ -19565,7 +19565,7 @@ p, li { white-space: pre-wrap; }
           <x>20</x>
           <y>50</y>
           <width>391</width>
-          <height>181</height>
+          <height>351</height>
          </rect>
         </property>
         <property name="palette">
@@ -20016,75 +20016,62 @@ p, li { white-space: pre-wrap; }
         <widget class="QWidget" name="formLayoutWidget_11">
          <property name="geometry">
           <rect>
-           <x>20</x>
+           <x>10</x>
            <y>10</y>
            <width>361</width>
-           <height>160</height>
+           <height>321</height>
           </rect>
          </property>
          <layout class="QFormLayout" name="formLayout_11">
           <item row="0" column="0">
            <widget class="QLabel" name="label_51">
             <property name="text">
-             <string>Type</string>
+             <string>nom</string>
             </property>
            </widget>
-          </item>
-          <item row="1" column="0">
-           <widget class="QLineEdit" name="TypeTrait_9">
-            <property name="placeholderText">
-             <string>Type de Traitement</string>
-            </property>
-            <property name="clearButtonEnabled">
-             <bool>false</bool>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="1">
-           <widget class="QLabel" name="label_52">
-            <property name="text">
-             <string>Date</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="1">
-           <widget class="QDateTimeEdit" name="DateTrait_9"/>
           </item>
           <item row="2" column="0">
            <widget class="QLabel" name="label_53">
             <property name="text">
-             <string>Description</string>
+             <string>categorie</string>
             </property>
            </widget>
           </item>
           <item row="3" column="0">
-           <widget class="QLineEdit" name="DescriptionTrait_9">
+           <widget class="QLineEdit" name="categorie_mat">
             <property name="placeholderText">
-             <string>description</string>
+             <string>categorie materiel</string>
             </property>
            </widget>
           </item>
-          <item row="2" column="1">
+          <item row="5" column="0">
+           <widget class="QLineEdit" name="etat_mat">
+            <property name="placeholderText">
+             <string>etat materiel</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0">
            <widget class="QLabel" name="label_54">
             <property name="text">
-             <string>Prix</string>
+             <string>etat</string>
             </property>
            </widget>
           </item>
-          <item row="3" column="1">
-           <widget class="QSpinBox" name="PrixTrait_11"/>
-          </item>
-          <item row="4" column="1">
-           <widget class="QPushButton" name="pushButton_35">
+          <item row="5" column="1">
+           <widget class="QPushButton" name="pushButton_16">
             <property name="text">
-             <string/>
+             <string>PushButton</string>
             </property>
-            <property name="icon">
-             <iconset>
-              <normaloff>../../Desktop/feather/download-cloud.svg</normaloff>../../Desktop/feather/download-cloud.svg</iconset>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLineEdit" name="nom_mate">
+            <property name="placeholderText">
+             <string>nom materiel</string>
             </property>
-            <property name="flat">
-             <bool>true</bool>
+            <property name="clearButtonEnabled">
+             <bool>false</bool>
             </property>
            </widget>
           </item>
@@ -21027,7 +21014,7 @@ p, li { white-space: pre-wrap; }
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../../Desktop/feather/refresh-ccw.svg</normaloff>../../Desktop/feather/refresh-ccw.svg</iconset>
+           <normaloff>../feather/refresh-ccw.svg</normaloff>../feather/refresh-ccw.svg</iconset>
          </property>
          <property name="checkable">
           <bool>false</bool>
@@ -21042,13 +21029,26 @@ p, li { white-space: pre-wrap; }
           <bool>true</bool>
          </property>
         </widget>
+        <widget class="QPushButton" name="pushButton_28">
+         <property name="geometry">
+          <rect>
+           <x>210</x>
+           <y>10</y>
+           <width>93</width>
+           <height>28</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>PushButton</string>
+         </property>
+        </widget>
        </widget>
       </widget>
      </widget>
      <widget class="QWidget" name="tab_7">
       <attribute name="icon">
        <iconset>
-        <normaloff>../../Desktop/feather/delete.svg</normaloff>../../Desktop/feather/delete.svg</iconset>
+        <normaloff>../feather/delete.svg</normaloff>../feather/delete.svg</iconset>
       </attribute>
       <attribute name="title">
        <string>Supprimer</string>
@@ -21071,7 +21071,7 @@ p, li { white-space: pre-wrap; }
           <x>60</x>
           <y>30</y>
           <width>321</width>
-          <height>91</height>
+          <height>141</height>
          </rect>
         </property>
         <property name="palette">
@@ -21525,33 +21525,40 @@ p, li { white-space: pre-wrap; }
            <x>20</x>
            <y>10</y>
            <width>281</width>
-           <height>67</height>
+           <height>121</height>
           </rect>
          </property>
          <layout class="QFormLayout" name="formLayout_27">
           <item row="0" column="0">
            <widget class="QLabel" name="label_100">
             <property name="text">
-             <string>Id Traitement</string>
+             <string>Id materiel</string>
             </property>
            </widget>
           </item>
-          <item row="0" column="1">
-           <widget class="QSpinBox" name="PrixTrait_27"/>
-          </item>
-          <item row="1" column="1">
+          <item row="2" column="1">
            <widget class="QPushButton" name="pushButton_59">
             <property name="text">
              <string/>
             </property>
             <property name="icon">
              <iconset>
-              <normaloff>../../Desktop/feather/delete.svg</normaloff>../../Desktop/feather/delete.svg</iconset>
+              <normaloff>../feather/delete.svg</normaloff>../feather/delete.svg</iconset>
             </property>
             <property name="flat">
              <bool>true</bool>
             </property>
            </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QPushButton" name="pushButton_22">
+            <property name="text">
+             <string>PushButton</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="id"/>
           </item>
          </layout>
         </widget>
@@ -22492,7 +22499,7 @@ p, li { white-space: pre-wrap; }
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../../Desktop/feather/refresh-ccw.svg</normaloff>../../Desktop/feather/refresh-ccw.svg</iconset>
+           <normaloff>../feather/refresh-ccw.svg</normaloff>../feather/refresh-ccw.svg</iconset>
          </property>
          <property name="checkable">
           <bool>false</bool>
@@ -22513,7 +22520,7 @@ p, li { white-space: pre-wrap; }
      <widget class="QWidget" name="tab_8">
       <attribute name="icon">
        <iconset>
-        <normaloff>../../Desktop/feather/copy.svg</normaloff>../../Desktop/feather/copy.svg</iconset>
+        <normaloff>../feather/copy.svg</normaloff>../feather/copy.svg</iconset>
       </attribute>
       <attribute name="title">
        <string>Modifier</string>
@@ -22975,10 +22982,10 @@ p, li { white-space: pre-wrap; }
        <widget class="QWidget" name="widget_100" native="true">
         <property name="geometry">
          <rect>
-          <x>20</x>
-          <y>130</y>
+          <x>10</x>
+          <y>170</y>
           <width>391</width>
-          <height>181</height>
+          <height>361</height>
          </rect>
         </property>
         <property name="palette">
@@ -23429,75 +23436,90 @@ p, li { white-space: pre-wrap; }
         <widget class="QWidget" name="formLayoutWidget_28">
          <property name="geometry">
           <rect>
-           <x>20</x>
+           <x>10</x>
            <y>10</y>
            <width>361</width>
-           <height>160</height>
+           <height>301</height>
           </rect>
          </property>
          <layout class="QFormLayout" name="formLayout_28">
-          <item row="0" column="0">
-           <widget class="QLabel" name="label_102">
-            <property name="text">
-             <string>Type</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="0">
-           <widget class="QLineEdit" name="TypeTrait_16">
-            <property name="placeholderText">
-             <string>Type de Traitement</string>
-            </property>
-            <property name="clearButtonEnabled">
-             <bool>false</bool>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="1">
-           <widget class="QLabel" name="label_103">
-            <property name="text">
-             <string>Date</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="1">
-           <widget class="QDateTimeEdit" name="DateTrait_16"/>
-          </item>
-          <item row="2" column="0">
-           <widget class="QLabel" name="label_104">
-            <property name="text">
-             <string>Description</string>
-            </property>
-           </widget>
-          </item>
-          <item row="3" column="0">
-           <widget class="QLineEdit" name="DescriptionTrait_16">
-            <property name="placeholderText">
-             <string>description</string>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="1">
-           <widget class="QLabel" name="label_105">
-            <property name="text">
-             <string>Prix</string>
-            </property>
-           </widget>
-          </item>
-          <item row="3" column="1">
-           <widget class="QSpinBox" name="PrixTrait_28"/>
-          </item>
-          <item row="4" column="1">
+          <item row="10" column="1">
            <widget class="QPushButton" name="pushButton_61">
             <property name="text">
              <string/>
             </property>
             <property name="icon">
              <iconset>
-              <normaloff>../../Desktop/feather/upload.svg</normaloff>../../Desktop/feather/upload.svg</iconset>
+              <normaloff>../feather/upload.svg</normaloff>../feather/upload.svg</iconset>
             </property>
             <property name="flat">
              <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="10" column="0">
+           <widget class="QLineEdit" name="etat">
+            <property name="placeholderText">
+             <string>etat materiel</string>
+            </property>
+           </widget>
+          </item>
+          <item row="9" column="0">
+           <widget class="QLabel" name="label_105">
+            <property name="text">
+             <string>etat</string>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="0">
+           <widget class="QLineEdit" name="categorie">
+            <property name="placeholderText">
+             <string>categorie materiel</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="0">
+           <widget class="QLabel" name="label_104">
+            <property name="text">
+             <string>categorie</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <widget class="QLineEdit" name="nom">
+            <property name="placeholderText">
+             <string>nom materiel</string>
+            </property>
+            <property name="clearButtonEnabled">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="label_102">
+            <property name="text">
+             <string>nom</string>
+            </property>
+           </widget>
+          </item>
+          <item row="11" column="1">
+           <widget class="QPushButton" name="pushButton_23">
+            <property name="text">
+             <string>PushButton</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_9">
+            <property name="text">
+             <string>id</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLineEdit" name="idmat">
+            <property name="placeholderText">
+             <string>id</string>
             </property>
            </widget>
           </item>
@@ -24440,7 +24462,7 @@ p, li { white-space: pre-wrap; }
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../../Desktop/feather/refresh-ccw.svg</normaloff>../../Desktop/feather/refresh-ccw.svg</iconset>
+           <normaloff>../feather/refresh-ccw.svg</normaloff>../feather/refresh-ccw.svg</iconset>
          </property>
          <property name="checkable">
           <bool>false</bool>
@@ -24454,483 +24476,6 @@ p, li { white-space: pre-wrap; }
          <property name="flat">
           <bool>true</bool>
          </property>
-        </widget>
-       </widget>
-       <widget class="QWidget" name="widget_102" native="true">
-        <property name="geometry">
-         <rect>
-          <x>20</x>
-          <y>30</y>
-          <width>391</width>
-          <height>61</height>
-         </rect>
-        </property>
-        <property name="palette">
-         <palette>
-          <active>
-           <colorrole role="WindowText">
-            <brush brushstyle="SolidPattern">
-             <color alpha="255">
-              <red>0</red>
-              <green>0</green>
-              <blue>0</blue>
-             </color>
-            </brush>
-           </colorrole>
-           <colorrole role="Button">
-            <brush brushstyle="SolidPattern">
-             <color alpha="255">
-              <red>174</red>
-              <green>211</green>
-              <blue>175</blue>
-             </color>
-            </brush>
-           </colorrole>
-           <colorrole role="Light">
-            <brush brushstyle="SolidPattern">
-             <color alpha="255">
-              <red>255</red>
-              <green>255</green>
-              <blue>255</blue>
-             </color>
-            </brush>
-           </colorrole>
-           <colorrole role="Midlight">
-            <brush brushstyle="SolidPattern">
-             <color alpha="255">
-              <red>214</red>
-              <green>233</green>
-              <blue>215</blue>
-             </color>
-            </brush>
-           </colorrole>
-           <colorrole role="Dark">
-            <brush brushstyle="SolidPattern">
-             <color alpha="255">
-              <red>87</red>
-              <green>105</green>
-              <blue>87</blue>
-             </color>
-            </brush>
-           </colorrole>
-           <colorrole role="Mid">
-            <brush brushstyle="SolidPattern">
-             <color alpha="255">
-              <red>116</red>
-              <green>141</green>
-              <blue>117</blue>
-             </color>
-            </brush>
-           </colorrole>
-           <colorrole role="Text">
-            <brush brushstyle="SolidPattern">
-             <color alpha="255">
-              <red>0</red>
-              <green>0</green>
-              <blue>0</blue>
-             </color>
-            </brush>
-           </colorrole>
-           <colorrole role="BrightText">
-            <brush brushstyle="SolidPattern">
-             <color alpha="255">
-              <red>255</red>
-              <green>255</green>
-              <blue>255</blue>
-             </color>
-            </brush>
-           </colorrole>
-           <colorrole role="ButtonText">
-            <brush brushstyle="SolidPattern">
-             <color alpha="255">
-              <red>0</red>
-              <green>0</green>
-              <blue>0</blue>
-             </color>
-            </brush>
-           </colorrole>
-           <colorrole role="Base">
-            <brush brushstyle="SolidPattern">
-             <color alpha="255">
-              <red>255</red>
-              <green>255</green>
-              <blue>255</blue>
-             </color>
-            </brush>
-           </colorrole>
-           <colorrole role="Window">
-            <brush brushstyle="SolidPattern">
-             <color alpha="255">
-              <red>174</red>
-              <green>211</green>
-              <blue>175</blue>
-             </color>
-            </brush>
-           </colorrole>
-           <colorrole role="Shadow">
-            <brush brushstyle="SolidPattern">
-             <color alpha="255">
-              <red>0</red>
-              <green>0</green>
-              <blue>0</blue>
-             </color>
-            </brush>
-           </colorrole>
-           <colorrole role="AlternateBase">
-            <brush brushstyle="SolidPattern">
-             <color alpha="255">
-              <red>214</red>
-              <green>233</green>
-              <blue>215</blue>
-             </color>
-            </brush>
-           </colorrole>
-           <colorrole role="ToolTipBase">
-            <brush brushstyle="SolidPattern">
-             <color alpha="255">
-              <red>255</red>
-              <green>255</green>
-              <blue>220</blue>
-             </color>
-            </brush>
-           </colorrole>
-           <colorrole role="ToolTipText">
-            <brush brushstyle="SolidPattern">
-             <color alpha="255">
-              <red>0</red>
-              <green>0</green>
-              <blue>0</blue>
-             </color>
-            </brush>
-           </colorrole>
-           <colorrole role="PlaceholderText">
-            <brush brushstyle="SolidPattern">
-             <color alpha="128">
-              <red>0</red>
-              <green>0</green>
-              <blue>0</blue>
-             </color>
-            </brush>
-           </colorrole>
-          </active>
-          <inactive>
-           <colorrole role="WindowText">
-            <brush brushstyle="SolidPattern">
-             <color alpha="255">
-              <red>0</red>
-              <green>0</green>
-              <blue>0</blue>
-             </color>
-            </brush>
-           </colorrole>
-           <colorrole role="Button">
-            <brush brushstyle="SolidPattern">
-             <color alpha="255">
-              <red>174</red>
-              <green>211</green>
-              <blue>175</blue>
-             </color>
-            </brush>
-           </colorrole>
-           <colorrole role="Light">
-            <brush brushstyle="SolidPattern">
-             <color alpha="255">
-              <red>255</red>
-              <green>255</green>
-              <blue>255</blue>
-             </color>
-            </brush>
-           </colorrole>
-           <colorrole role="Midlight">
-            <brush brushstyle="SolidPattern">
-             <color alpha="255">
-              <red>214</red>
-              <green>233</green>
-              <blue>215</blue>
-             </color>
-            </brush>
-           </colorrole>
-           <colorrole role="Dark">
-            <brush brushstyle="SolidPattern">
-             <color alpha="255">
-              <red>87</red>
-              <green>105</green>
-              <blue>87</blue>
-             </color>
-            </brush>
-           </colorrole>
-           <colorrole role="Mid">
-            <brush brushstyle="SolidPattern">
-             <color alpha="255">
-              <red>116</red>
-              <green>141</green>
-              <blue>117</blue>
-             </color>
-            </brush>
-           </colorrole>
-           <colorrole role="Text">
-            <brush brushstyle="SolidPattern">
-             <color alpha="255">
-              <red>0</red>
-              <green>0</green>
-              <blue>0</blue>
-             </color>
-            </brush>
-           </colorrole>
-           <colorrole role="BrightText">
-            <brush brushstyle="SolidPattern">
-             <color alpha="255">
-              <red>255</red>
-              <green>255</green>
-              <blue>255</blue>
-             </color>
-            </brush>
-           </colorrole>
-           <colorrole role="ButtonText">
-            <brush brushstyle="SolidPattern">
-             <color alpha="255">
-              <red>0</red>
-              <green>0</green>
-              <blue>0</blue>
-             </color>
-            </brush>
-           </colorrole>
-           <colorrole role="Base">
-            <brush brushstyle="SolidPattern">
-             <color alpha="255">
-              <red>255</red>
-              <green>255</green>
-              <blue>255</blue>
-             </color>
-            </brush>
-           </colorrole>
-           <colorrole role="Window">
-            <brush brushstyle="SolidPattern">
-             <color alpha="255">
-              <red>174</red>
-              <green>211</green>
-              <blue>175</blue>
-             </color>
-            </brush>
-           </colorrole>
-           <colorrole role="Shadow">
-            <brush brushstyle="SolidPattern">
-             <color alpha="255">
-              <red>0</red>
-              <green>0</green>
-              <blue>0</blue>
-             </color>
-            </brush>
-           </colorrole>
-           <colorrole role="AlternateBase">
-            <brush brushstyle="SolidPattern">
-             <color alpha="255">
-              <red>214</red>
-              <green>233</green>
-              <blue>215</blue>
-             </color>
-            </brush>
-           </colorrole>
-           <colorrole role="ToolTipBase">
-            <brush brushstyle="SolidPattern">
-             <color alpha="255">
-              <red>255</red>
-              <green>255</green>
-              <blue>220</blue>
-             </color>
-            </brush>
-           </colorrole>
-           <colorrole role="ToolTipText">
-            <brush brushstyle="SolidPattern">
-             <color alpha="255">
-              <red>0</red>
-              <green>0</green>
-              <blue>0</blue>
-             </color>
-            </brush>
-           </colorrole>
-           <colorrole role="PlaceholderText">
-            <brush brushstyle="SolidPattern">
-             <color alpha="128">
-              <red>0</red>
-              <green>0</green>
-              <blue>0</blue>
-             </color>
-            </brush>
-           </colorrole>
-          </inactive>
-          <disabled>
-           <colorrole role="WindowText">
-            <brush brushstyle="SolidPattern">
-             <color alpha="255">
-              <red>87</red>
-              <green>105</green>
-              <blue>87</blue>
-             </color>
-            </brush>
-           </colorrole>
-           <colorrole role="Button">
-            <brush brushstyle="SolidPattern">
-             <color alpha="255">
-              <red>174</red>
-              <green>211</green>
-              <blue>175</blue>
-             </color>
-            </brush>
-           </colorrole>
-           <colorrole role="Light">
-            <brush brushstyle="SolidPattern">
-             <color alpha="255">
-              <red>255</red>
-              <green>255</green>
-              <blue>255</blue>
-             </color>
-            </brush>
-           </colorrole>
-           <colorrole role="Midlight">
-            <brush brushstyle="SolidPattern">
-             <color alpha="255">
-              <red>214</red>
-              <green>233</green>
-              <blue>215</blue>
-             </color>
-            </brush>
-           </colorrole>
-           <colorrole role="Dark">
-            <brush brushstyle="SolidPattern">
-             <color alpha="255">
-              <red>87</red>
-              <green>105</green>
-              <blue>87</blue>
-             </color>
-            </brush>
-           </colorrole>
-           <colorrole role="Mid">
-            <brush brushstyle="SolidPattern">
-             <color alpha="255">
-              <red>116</red>
-              <green>141</green>
-              <blue>117</blue>
-             </color>
-            </brush>
-           </colorrole>
-           <colorrole role="Text">
-            <brush brushstyle="SolidPattern">
-             <color alpha="255">
-              <red>87</red>
-              <green>105</green>
-              <blue>87</blue>
-             </color>
-            </brush>
-           </colorrole>
-           <colorrole role="BrightText">
-            <brush brushstyle="SolidPattern">
-             <color alpha="255">
-              <red>255</red>
-              <green>255</green>
-              <blue>255</blue>
-             </color>
-            </brush>
-           </colorrole>
-           <colorrole role="ButtonText">
-            <brush brushstyle="SolidPattern">
-             <color alpha="255">
-              <red>87</red>
-              <green>105</green>
-              <blue>87</blue>
-             </color>
-            </brush>
-           </colorrole>
-           <colorrole role="Base">
-            <brush brushstyle="SolidPattern">
-             <color alpha="255">
-              <red>174</red>
-              <green>211</green>
-              <blue>175</blue>
-             </color>
-            </brush>
-           </colorrole>
-           <colorrole role="Window">
-            <brush brushstyle="SolidPattern">
-             <color alpha="255">
-              <red>174</red>
-              <green>211</green>
-              <blue>175</blue>
-             </color>
-            </brush>
-           </colorrole>
-           <colorrole role="Shadow">
-            <brush brushstyle="SolidPattern">
-             <color alpha="255">
-              <red>0</red>
-              <green>0</green>
-              <blue>0</blue>
-             </color>
-            </brush>
-           </colorrole>
-           <colorrole role="AlternateBase">
-            <brush brushstyle="SolidPattern">
-             <color alpha="255">
-              <red>174</red>
-              <green>211</green>
-              <blue>175</blue>
-             </color>
-            </brush>
-           </colorrole>
-           <colorrole role="ToolTipBase">
-            <brush brushstyle="SolidPattern">
-             <color alpha="255">
-              <red>255</red>
-              <green>255</green>
-              <blue>220</blue>
-             </color>
-            </brush>
-           </colorrole>
-           <colorrole role="ToolTipText">
-            <brush brushstyle="SolidPattern">
-             <color alpha="255">
-              <red>0</red>
-              <green>0</green>
-              <blue>0</blue>
-             </color>
-            </brush>
-           </colorrole>
-           <colorrole role="PlaceholderText">
-            <brush brushstyle="SolidPattern">
-             <color alpha="128">
-              <red>0</red>
-              <green>0</green>
-              <blue>0</blue>
-             </color>
-            </brush>
-           </colorrole>
-          </disabled>
-         </palette>
-        </property>
-        <property name="autoFillBackground">
-         <bool>true</bool>
-        </property>
-        <widget class="QWidget" name="formLayoutWidget_29">
-         <property name="geometry">
-          <rect>
-           <x>20</x>
-           <y>10</y>
-           <width>351</width>
-           <height>41</height>
-          </rect>
-         </property>
-         <layout class="QFormLayout" name="formLayout_29">
-          <item row="0" column="0">
-           <widget class="QLabel" name="label_107">
-            <property name="text">
-             <string>Id Traitement</string>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="1">
-           <widget class="QSpinBox" name="PrixTrait_29"/>
-          </item>
-         </layout>
         </widget>
        </widget>
       </widget>
@@ -24960,7 +24505,7 @@ p, li { white-space: pre-wrap; }
      <widget class="QWidget" name="tab_9">
       <attribute name="icon">
        <iconset>
-        <normaloff>../../Desktop/feather/home.svg</normaloff>../../Desktop/feather/home.svg</iconset>
+        <normaloff>../feather/home.svg</normaloff>../feather/home.svg</iconset>
       </attribute>
       <attribute name="title">
        <string>General</string>
@@ -27275,7 +26820,7 @@ p, li { white-space: pre-wrap; }
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../../Desktop/feather/refresh-ccw.svg</normaloff>../../Desktop/feather/refresh-ccw.svg</iconset>
+           <normaloff>../feather/refresh-ccw.svg</normaloff>../feather/refresh-ccw.svg</iconset>
          </property>
          <property name="checkable">
           <bool>false</bool>
@@ -27296,7 +26841,7 @@ p, li { white-space: pre-wrap; }
      <widget class="QWidget" name="tab_10">
       <attribute name="icon">
        <iconset>
-        <normaloff>../../Desktop/feather/arrow-down.svg</normaloff>../../Desktop/feather/arrow-down.svg</iconset>
+        <normaloff>../feather/arrow-down.svg</normaloff>../feather/arrow-down.svg</iconset>
       </attribute>
       <attribute name="title">
        <string>Ajouter</string>
@@ -28277,7 +27822,7 @@ p, li { white-space: pre-wrap; }
             </property>
             <property name="icon">
              <iconset>
-              <normaloff>../../Desktop/feather/download-cloud.svg</normaloff>../../Desktop/feather/download-cloud.svg</iconset>
+              <normaloff>../feather/download-cloud.svg</normaloff>../feather/download-cloud.svg</iconset>
             </property>
             <property name="flat">
              <bool>true</bool>
@@ -29223,7 +28768,7 @@ p, li { white-space: pre-wrap; }
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../../Desktop/feather/refresh-ccw.svg</normaloff>../../Desktop/feather/refresh-ccw.svg</iconset>
+           <normaloff>../feather/refresh-ccw.svg</normaloff>../feather/refresh-ccw.svg</iconset>
          </property>
          <property name="checkable">
           <bool>false</bool>
@@ -29244,7 +28789,7 @@ p, li { white-space: pre-wrap; }
      <widget class="QWidget" name="tab_11">
       <attribute name="icon">
        <iconset>
-        <normaloff>../../Desktop/feather/delete.svg</normaloff>../../Desktop/feather/delete.svg</iconset>
+        <normaloff>../feather/delete.svg</normaloff>../feather/delete.svg</iconset>
       </attribute>
       <attribute name="title">
        <string>Supprimer</string>
@@ -29742,7 +29287,7 @@ p, li { white-space: pre-wrap; }
             </property>
             <property name="icon">
              <iconset>
-              <normaloff>../../Desktop/feather/delete.svg</normaloff>../../Desktop/feather/delete.svg</iconset>
+              <normaloff>../feather/delete.svg</normaloff>../feather/delete.svg</iconset>
             </property>
             <property name="flat">
              <bool>true</bool>
@@ -30688,7 +30233,7 @@ p, li { white-space: pre-wrap; }
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../../Desktop/feather/refresh-ccw.svg</normaloff>../../Desktop/feather/refresh-ccw.svg</iconset>
+           <normaloff>../feather/refresh-ccw.svg</normaloff>../feather/refresh-ccw.svg</iconset>
          </property>
          <property name="checkable">
           <bool>false</bool>
@@ -30709,7 +30254,7 @@ p, li { white-space: pre-wrap; }
      <widget class="QWidget" name="tab_12">
       <attribute name="icon">
        <iconset>
-        <normaloff>../../Desktop/feather/copy.svg</normaloff>../../Desktop/feather/copy.svg</iconset>
+        <normaloff>../feather/copy.svg</normaloff>../feather/copy.svg</iconset>
       </attribute>
       <attribute name="title">
        <string>Modifier</string>
@@ -31690,7 +31235,7 @@ p, li { white-space: pre-wrap; }
             </property>
             <property name="icon">
              <iconset>
-              <normaloff>../../Desktop/feather/upload.svg</normaloff>../../Desktop/feather/upload.svg</iconset>
+              <normaloff>../feather/upload.svg</normaloff>../feather/upload.svg</iconset>
             </property>
             <property name="flat">
              <bool>true</bool>
@@ -32636,7 +32181,7 @@ p, li { white-space: pre-wrap; }
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../../Desktop/feather/refresh-ccw.svg</normaloff>../../Desktop/feather/refresh-ccw.svg</iconset>
+           <normaloff>../feather/refresh-ccw.svg</normaloff>../feather/refresh-ccw.svg</iconset>
          </property>
          <property name="checkable">
           <bool>false</bool>
@@ -33156,7 +32701,7 @@ p, li { white-space: pre-wrap; }
      <widget class="QWidget" name="tab_13">
       <attribute name="icon">
        <iconset>
-        <normaloff>../../Desktop/feather/home.svg</normaloff>../../Desktop/feather/home.svg</iconset>
+        <normaloff>../feather/home.svg</normaloff>../feather/home.svg</iconset>
       </attribute>
       <attribute name="title">
        <string>General</string>
@@ -35471,7 +35016,7 @@ p, li { white-space: pre-wrap; }
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../../Desktop/feather/refresh-ccw.svg</normaloff>../../Desktop/feather/refresh-ccw.svg</iconset>
+           <normaloff>../feather/refresh-ccw.svg</normaloff>../feather/refresh-ccw.svg</iconset>
          </property>
          <property name="checkable">
           <bool>false</bool>
@@ -35492,7 +35037,7 @@ p, li { white-space: pre-wrap; }
      <widget class="QWidget" name="tab_14">
       <attribute name="icon">
        <iconset>
-        <normaloff>../../Desktop/feather/arrow-down.svg</normaloff>../../Desktop/feather/arrow-down.svg</iconset>
+        <normaloff>../feather/arrow-down.svg</normaloff>../feather/arrow-down.svg</iconset>
       </attribute>
       <attribute name="title">
        <string>Ajouter</string>
@@ -36473,7 +36018,7 @@ p, li { white-space: pre-wrap; }
             </property>
             <property name="icon">
              <iconset>
-              <normaloff>../../Desktop/feather/download-cloud.svg</normaloff>../../Desktop/feather/download-cloud.svg</iconset>
+              <normaloff>../feather/download-cloud.svg</normaloff>../feather/download-cloud.svg</iconset>
             </property>
             <property name="flat">
              <bool>true</bool>
@@ -37419,7 +36964,7 @@ p, li { white-space: pre-wrap; }
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../../Desktop/feather/refresh-ccw.svg</normaloff>../../Desktop/feather/refresh-ccw.svg</iconset>
+           <normaloff>../feather/refresh-ccw.svg</normaloff>../feather/refresh-ccw.svg</iconset>
          </property>
          <property name="checkable">
           <bool>false</bool>
@@ -37440,7 +36985,7 @@ p, li { white-space: pre-wrap; }
      <widget class="QWidget" name="tab_15">
       <attribute name="icon">
        <iconset>
-        <normaloff>../../Desktop/feather/delete.svg</normaloff>../../Desktop/feather/delete.svg</iconset>
+        <normaloff>../feather/delete.svg</normaloff>../feather/delete.svg</iconset>
       </attribute>
       <attribute name="title">
        <string>Supprimer</string>
@@ -37938,7 +37483,7 @@ p, li { white-space: pre-wrap; }
             </property>
             <property name="icon">
              <iconset>
-              <normaloff>../../Desktop/feather/delete.svg</normaloff>../../Desktop/feather/delete.svg</iconset>
+              <normaloff>../feather/delete.svg</normaloff>../feather/delete.svg</iconset>
             </property>
             <property name="flat">
              <bool>true</bool>
@@ -38884,7 +38429,7 @@ p, li { white-space: pre-wrap; }
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../../Desktop/feather/refresh-ccw.svg</normaloff>../../Desktop/feather/refresh-ccw.svg</iconset>
+           <normaloff>../feather/refresh-ccw.svg</normaloff>../feather/refresh-ccw.svg</iconset>
          </property>
          <property name="checkable">
           <bool>false</bool>
@@ -38905,7 +38450,7 @@ p, li { white-space: pre-wrap; }
      <widget class="QWidget" name="tab_16">
       <attribute name="icon">
        <iconset>
-        <normaloff>../../Desktop/feather/copy.svg</normaloff>../../Desktop/feather/copy.svg</iconset>
+        <normaloff>../feather/copy.svg</normaloff>../feather/copy.svg</iconset>
       </attribute>
       <attribute name="title">
        <string>Modifier</string>
@@ -39886,7 +39431,7 @@ p, li { white-space: pre-wrap; }
             </property>
             <property name="icon">
              <iconset>
-              <normaloff>../../Desktop/feather/upload.svg</normaloff>../../Desktop/feather/upload.svg</iconset>
+              <normaloff>../feather/upload.svg</normaloff>../feather/upload.svg</iconset>
             </property>
             <property name="flat">
              <bool>true</bool>
@@ -40832,7 +40377,7 @@ p, li { white-space: pre-wrap; }
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../../Desktop/feather/refresh-ccw.svg</normaloff>../../Desktop/feather/refresh-ccw.svg</iconset>
+           <normaloff>../feather/refresh-ccw.svg</normaloff>../feather/refresh-ccw.svg</iconset>
          </property>
          <property name="checkable">
           <bool>false</bool>
@@ -41349,7 +40894,7 @@ p, li { white-space: pre-wrap; }
      <widget class="QWidget" name="tab_17">
       <attribute name="icon">
        <iconset>
-        <normaloff>../../Desktop/feather/home.svg</normaloff>../../Desktop/feather/home.svg</iconset>
+        <normaloff>../feather/home.svg</normaloff>../feather/home.svg</iconset>
       </attribute>
       <attribute name="title">
        <string>General</string>
@@ -43664,7 +43209,7 @@ p, li { white-space: pre-wrap; }
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../../Desktop/feather/refresh-ccw.svg</normaloff>../../Desktop/feather/refresh-ccw.svg</iconset>
+           <normaloff>../feather/refresh-ccw.svg</normaloff>../feather/refresh-ccw.svg</iconset>
          </property>
          <property name="checkable">
           <bool>false</bool>
@@ -43685,7 +43230,7 @@ p, li { white-space: pre-wrap; }
      <widget class="QWidget" name="tab_18">
       <attribute name="icon">
        <iconset>
-        <normaloff>../../Desktop/feather/arrow-down.svg</normaloff>../../Desktop/feather/arrow-down.svg</iconset>
+        <normaloff>../feather/arrow-down.svg</normaloff>../feather/arrow-down.svg</iconset>
       </attribute>
       <attribute name="title">
        <string>Ajouter</string>
@@ -44604,7 +44149,7 @@ p, li { white-space: pre-wrap; }
            <x>20</x>
            <y>10</y>
            <width>361</width>
-           <height>160</height>
+           <height>198</height>
           </rect>
          </property>
          <layout class="QFormLayout" name="formLayout_10">
@@ -44659,17 +44204,31 @@ p, li { white-space: pre-wrap; }
           <item row="3" column="1">
            <widget class="QSpinBox" name="PrixTrait_10"/>
           </item>
-          <item row="4" column="1">
+          <item row="6" column="1">
            <widget class="QPushButton" name="pushButton_33">
             <property name="text">
              <string/>
             </property>
             <property name="icon">
              <iconset>
-              <normaloff>../../Desktop/feather/download-cloud.svg</normaloff>../../Desktop/feather/download-cloud.svg</iconset>
+              <normaloff>../feather/download-cloud.svg</normaloff>../feather/download-cloud.svg</iconset>
             </property>
             <property name="flat">
              <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="1">
+           <widget class="QPushButton" name="pushButton_15">
+            <property name="text">
+             <string>PushButton</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="1">
+           <widget class="QPushButton" name="pushButton_27">
+            <property name="text">
+             <string>PushButton</string>
             </property>
            </widget>
           </item>
@@ -45612,7 +45171,7 @@ p, li { white-space: pre-wrap; }
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../../Desktop/feather/refresh-ccw.svg</normaloff>../../Desktop/feather/refresh-ccw.svg</iconset>
+           <normaloff>../feather/refresh-ccw.svg</normaloff>../feather/refresh-ccw.svg</iconset>
          </property>
          <property name="checkable">
           <bool>false</bool>
@@ -45633,7 +45192,7 @@ p, li { white-space: pre-wrap; }
      <widget class="QWidget" name="tab_19">
       <attribute name="icon">
        <iconset>
-        <normaloff>../../Desktop/feather/delete.svg</normaloff>../../Desktop/feather/delete.svg</iconset>
+        <normaloff>../feather/delete.svg</normaloff>../feather/delete.svg</iconset>
       </attribute>
       <attribute name="title">
        <string>Supprimer</string>
@@ -46131,7 +45690,7 @@ p, li { white-space: pre-wrap; }
             </property>
             <property name="icon">
              <iconset>
-              <normaloff>../../Desktop/feather/delete.svg</normaloff>../../Desktop/feather/delete.svg</iconset>
+              <normaloff>../feather/delete.svg</normaloff>../feather/delete.svg</iconset>
             </property>
             <property name="flat">
              <bool>true</bool>
@@ -47077,7 +46636,7 @@ p, li { white-space: pre-wrap; }
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../../Desktop/feather/refresh-ccw.svg</normaloff>../../Desktop/feather/refresh-ccw.svg</iconset>
+           <normaloff>../feather/refresh-ccw.svg</normaloff>../feather/refresh-ccw.svg</iconset>
          </property>
          <property name="checkable">
           <bool>false</bool>
@@ -47098,7 +46657,7 @@ p, li { white-space: pre-wrap; }
      <widget class="QWidget" name="tab_20">
       <attribute name="icon">
        <iconset>
-        <normaloff>../../Desktop/feather/copy.svg</normaloff>../../Desktop/feather/copy.svg</iconset>
+        <normaloff>../feather/copy.svg</normaloff>../feather/copy.svg</iconset>
       </attribute>
       <attribute name="title">
        <string>Modifier</string>
@@ -48079,7 +47638,7 @@ p, li { white-space: pre-wrap; }
             </property>
             <property name="icon">
              <iconset>
-              <normaloff>../../Desktop/feather/upload.svg</normaloff>../../Desktop/feather/upload.svg</iconset>
+              <normaloff>../feather/upload.svg</normaloff>../feather/upload.svg</iconset>
             </property>
             <property name="flat">
              <bool>true</bool>
@@ -49025,7 +48584,7 @@ p, li { white-space: pre-wrap; }
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../../Desktop/feather/refresh-ccw.svg</normaloff>../../Desktop/feather/refresh-ccw.svg</iconset>
+           <normaloff>../feather/refresh-ccw.svg</normaloff>../feather/refresh-ccw.svg</iconset>
          </property>
          <property name="checkable">
           <bool>false</bool>
@@ -49545,7 +49104,7 @@ p, li { white-space: pre-wrap; }
      <widget class="QWidget" name="tab_21">
       <attribute name="icon">
        <iconset>
-        <normaloff>../../Desktop/feather/home.svg</normaloff>../../Desktop/feather/home.svg</iconset>
+        <normaloff>../feather/home.svg</normaloff>../feather/home.svg</iconset>
       </attribute>
       <attribute name="title">
        <string>General</string>
@@ -51860,7 +51419,7 @@ p, li { white-space: pre-wrap; }
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../../Desktop/feather/refresh-ccw.svg</normaloff>../../Desktop/feather/refresh-ccw.svg</iconset>
+           <normaloff>../feather/refresh-ccw.svg</normaloff>../feather/refresh-ccw.svg</iconset>
          </property>
          <property name="checkable">
           <bool>false</bool>
@@ -51881,7 +51440,7 @@ p, li { white-space: pre-wrap; }
      <widget class="QWidget" name="tab_23">
       <attribute name="icon">
        <iconset>
-        <normaloff>../../Desktop/feather/arrow-down.svg</normaloff>../../Desktop/feather/arrow-down.svg</iconset>
+        <normaloff>../feather/arrow-down.svg</normaloff>../feather/arrow-down.svg</iconset>
       </attribute>
       <attribute name="title">
        <string>Ajouter</string>
@@ -52862,7 +52421,7 @@ p, li { white-space: pre-wrap; }
             </property>
             <property name="icon">
              <iconset>
-              <normaloff>../../Desktop/feather/download-cloud.svg</normaloff>../../Desktop/feather/download-cloud.svg</iconset>
+              <normaloff>../feather/download-cloud.svg</normaloff>../feather/download-cloud.svg</iconset>
             </property>
             <property name="flat">
              <bool>true</bool>
@@ -53808,7 +53367,7 @@ p, li { white-space: pre-wrap; }
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../../Desktop/feather/refresh-ccw.svg</normaloff>../../Desktop/feather/refresh-ccw.svg</iconset>
+           <normaloff>../feather/refresh-ccw.svg</normaloff>../feather/refresh-ccw.svg</iconset>
          </property>
          <property name="checkable">
           <bool>false</bool>
@@ -53829,7 +53388,7 @@ p, li { white-space: pre-wrap; }
      <widget class="QWidget" name="tab_22">
       <attribute name="icon">
        <iconset>
-        <normaloff>../../Desktop/feather/delete.svg</normaloff>../../Desktop/feather/delete.svg</iconset>
+        <normaloff>../feather/delete.svg</normaloff>../feather/delete.svg</iconset>
       </attribute>
       <attribute name="title">
        <string>Supprimer</string>
@@ -54327,7 +53886,7 @@ p, li { white-space: pre-wrap; }
             </property>
             <property name="icon">
              <iconset>
-              <normaloff>../../Desktop/feather/delete.svg</normaloff>../../Desktop/feather/delete.svg</iconset>
+              <normaloff>../feather/delete.svg</normaloff>../feather/delete.svg</iconset>
             </property>
             <property name="flat">
              <bool>true</bool>
@@ -55273,7 +54832,7 @@ p, li { white-space: pre-wrap; }
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../../Desktop/feather/refresh-ccw.svg</normaloff>../../Desktop/feather/refresh-ccw.svg</iconset>
+           <normaloff>../feather/refresh-ccw.svg</normaloff>../feather/refresh-ccw.svg</iconset>
          </property>
          <property name="checkable">
           <bool>false</bool>
@@ -55294,7 +54853,7 @@ p, li { white-space: pre-wrap; }
      <widget class="QWidget" name="tab_24">
       <attribute name="icon">
        <iconset>
-        <normaloff>../../Desktop/feather/copy.svg</normaloff>../../Desktop/feather/copy.svg</iconset>
+        <normaloff>../feather/copy.svg</normaloff>../feather/copy.svg</iconset>
       </attribute>
       <attribute name="title">
        <string>Modifier</string>
@@ -56275,7 +55834,7 @@ p, li { white-space: pre-wrap; }
             </property>
             <property name="icon">
              <iconset>
-              <normaloff>../../Desktop/feather/upload.svg</normaloff>../../Desktop/feather/upload.svg</iconset>
+              <normaloff>../feather/upload.svg</normaloff>../feather/upload.svg</iconset>
             </property>
             <property name="flat">
              <bool>true</bool>
@@ -57221,7 +56780,7 @@ p, li { white-space: pre-wrap; }
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../../Desktop/feather/refresh-ccw.svg</normaloff>../../Desktop/feather/refresh-ccw.svg</iconset>
+           <normaloff>../feather/refresh-ccw.svg</normaloff>../feather/refresh-ccw.svg</iconset>
          </property>
          <property name="checkable">
           <bool>false</bool>
@@ -57722,7 +57281,7 @@ p, li { white-space: pre-wrap; }
       <rect>
        <x>-230</x>
        <y>-40</y>
-       <width>721</width>
+       <width>731</width>
        <height>741</height>
       </rect>
      </property>
@@ -57739,7 +57298,7 @@ p, li { white-space: pre-wrap; }
       <enum>Qt::AutoText</enum>
      </property>
      <property name="pixmap">
-      <pixmap>../../Desktop/Capture-removebg-preview.png</pixmap>
+      <pixmap>../Capture-removebg-preview.png</pixmap>
      </property>
      <property name="scaledContents">
       <bool>true</bool>
@@ -57753,10 +57312,10 @@ p, li { white-space: pre-wrap; }
     <zorder>label_3</zorder>
     <zorder>Rdv</zorder>
     <zorder>Atelier</zorder>
-    <zorder>Employe</zorder>
     <zorder>Patient</zorder>
-    <zorder>Materiel</zorder>
     <zorder>Traitement</zorder>
+    <zorder>Employe</zorder>
+    <zorder>Materiel</zorder>
    </widget>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
@@ -57765,8 +57324,8 @@ p, li { white-space: pre-wrap; }
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1121</width>
-     <height>30</height>
+     <width>1126</width>
+     <height>26</height>
     </rect>
    </property>
   </widget>

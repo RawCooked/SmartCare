@@ -19,11 +19,13 @@ SOURCES += \
     connexion.cpp \
     main.cpp \
     mainwindow.cpp \
+    materiel.cpp \
     traitement.cpp
 
 HEADERS += \
     connexion.h \
     mainwindow.h \
+    materiel.h \
     traitement.h
 FORMS += \
     mainwindow.ui

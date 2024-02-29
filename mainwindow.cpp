@@ -103,26 +103,32 @@ void MainWindow::on_pushButton_5_clicked()
     changeWidget(8);
 }
 
-void MainWindow::on_pushButton_9_clicked()
+void MainWindow::on_pushButton_16_clicked()
 {
     Connexion c;
-    //c.displayTraitInListView(ui->listView);
+
+    materiel m("1", ui->nom_mate->text().toStdString(), ui->categorie_mat->text().toStdString(), ui->etat_mat->text().toStdString());
+    c.addmateriel(m);
 }
 
-void MainWindow::on_pushButton_14_clicked()
+void MainWindow::on_pushButton_22_clicked()
 {
     Connexion c;
-    Traitement T(0,ui->TypeTrait->text(),ui->DateTrait->date(),ui->DescriptionTrait->text(),ui->PrixTrait->value());
-    c.addTrait(T);
+        std::string idToDelete = ui->id->text().toStdString();
+       c.deletemateriel(idToDelete);
 }
 
-void MainWindow::on_pushButton_59_clicked()
-{
-
-}
-
-void MainWindow::on_pushButton_24_clicked()
+void MainWindow::on_pushButton_23_clicked()
 {
     Connexion c;
-    c.deleteTrait(ui->PrixTrait_4->value());
+       materiel m(ui->idmat->text().toStdString(),ui->nom->text().toStdString(),ui->categorie->text().toStdString(),ui->etat->text().toStdString());
+       c.updateMateriel(m);
+}
+
+
+
+void MainWindow::on_pushButton_28_clicked()
+{
+    Connexion c;
+      c.displayWMAterieltInListView(ui->listView_14);
 }

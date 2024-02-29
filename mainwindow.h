@@ -44,9 +44,19 @@ private slots:
 
     void on_pushButton_59_clicked();
 
-    void on_PrixTrait_4_textChanged(const QString &arg1);
-
     void on_pushButton_24_clicked();
+
+    void on_pushButton_15_clicked();
+
+    void on_pushButton_16_clicked();
+
+    void on_pushButton_22_clicked();
+
+    void on_pushButton_23_clicked();
+
+    void on_pushButton_27_clicked();
+
+    void on_pushButton_28_clicked();
 
 private:
     Ui::MainWindow *ui;

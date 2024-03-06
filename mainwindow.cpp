@@ -107,21 +107,21 @@ void MainWindow::on_pushButton_16_clicked()
 {
     Connexion c;
 
-    materiel m("1", ui->nom_mate->text().toStdString(), ui->categorie_mat->text().toStdString(), ui->etat_mat->text().toStdString());
+   materiel m(ui->nom_mate->text().toStdString(), ui->categorie_mat->text().toStdString(), ui->etat_mat->text().toStdString());
     c.addmateriel(m);
 }
 
 void MainWindow::on_pushButton_22_clicked()
 {
     Connexion c;
-        std::string idToDelete = ui->id->text().toStdString();
+       int idToDelete = ui->id->text().toInt();
        c.deletemateriel(idToDelete);
 }
 
 void MainWindow::on_pushButton_23_clicked()
 {
     Connexion c;
-       materiel m(ui->idmat->text().toStdString(),ui->nom->text().toStdString(),ui->categorie->text().toStdString(),ui->etat->text().toStdString());
+       materiel m(ui->idmat->text().toInt(),ui->nom->text().toStdString(),ui->categorie->text().toStdString(),ui->etat->text().toStdString());
        c.updateMateriel(m);
 }
 

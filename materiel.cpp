@@ -1,6 +1,6 @@
 #include "materiel.h"
 
-materiel::materiel(std::string id,std::string n,std::string c,std::string e)
+materiel::materiel(int id,std::string n,std::string c,std::string e)
 {
     id_mat=id ;
     nom_mat=n ;
@@ -8,11 +8,20 @@ materiel::materiel(std::string id,std::string n,std::string c,std::string e)
     categorie=c ;
     etat=e ;
 }
+materiel::materiel(std::string n,std::string c,std::string e)
+{
+
+    nom_mat=n ;
+
+    categorie=c ;
+    etat=e ;
+}
+
 materiel::~materiel()
 {
 
 }
-std::string materiel::id_matGet()
+int materiel::id_matGet()
 {
     return id_mat ;
 }
@@ -29,7 +38,7 @@ std::string materiel::etatGet()
 {
     return etat ;
 }
-void materiel::id_matSet(std::string& id)
+void materiel::id_matSet(int id)
 {
     id_mat=id ;
 }

@@ -92,7 +92,7 @@ bool Connexion::addmateriel(materiel m)
 
     QSqlQuery query;
     query.prepare(queryString);
-    query.bindValue(":id_mat",QString::fromStdString (m.id_matGet()));
+    query.bindValue(":id_mat", m.id_matGet());
     query.bindValue(":nom_mat", QString::fromStdString(m.nom_matGet()));
     query.bindValue(":categorie", QString::fromStdString(m.categorieGet()));
     query.bindValue(":etat", QString::fromStdString(m.etatGet()));
@@ -111,12 +111,12 @@ bool Connexion::addmateriel(materiel m)
 
 }
 
-bool Connexion::deletemateriel(std::string id_mat)
+bool Connexion::deletemateriel(int id_mat)
 {
     QString queryString = "DELETE FROM MATERIEL WHERE id_mat = :id_mat;";
     QSqlQuery query;
     query.prepare(queryString);
-    query.bindValue(":id_mat", QString::fromStdString(id_mat));
+    query.bindValue(":id_mat",id_mat);
 
 
     if (query.exec()) {
@@ -135,7 +135,7 @@ bool Connexion::updateMateriel(materiel m)
     query.bindValue(":nom_mat", QString::fromStdString(m.nom_matGet()));
     query.bindValue(":categorie", QString::fromStdString(m.categorieGet()));
     query.bindValue(":etat", QString::fromStdString(m.etatGet()));
-     query.bindValue(":id_mat",QString::fromStdString (m.id_matGet()));
+     query.bindValue(":id_mat",m.id_matGet());
 
     if (query.exec()) {
         qDebug() << "WorkShop updated successfully.";

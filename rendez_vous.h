@@ -36,8 +36,11 @@ public:
     QVector<QStringList> selectAllRdv();
     void displayRdvInListView(QListView* listView);
     bool supprimerR (int);
-    QSqlQueryModel * rechercherR(const QString &);
-    QSqlQueryModel * trierR(const QString &critere, const QString &mode );
     bool modifierR(int ,QDate, int , QString);
+    QVector<QStringList> selectAllRdvTri();
+    void displayRdvInListViewTri(QListView* listView);
+    QVector<QStringList> selectAllRdvByType();
+    QMap<QString, int> getRdvlStatisticsByType();
+    bool displayRdvListViewUpdated(QListView* listView, QVector<QStringList> data);
 };
 #endif // RENDEZ_VOUS_H

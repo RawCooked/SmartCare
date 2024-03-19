@@ -45,7 +45,7 @@ private slots:
 
     void on_pushButton_59_clicked();
 
-    void on_PrixTrait_4_textChanged(const QString &arg1);
+
 
     void on_pushButton_24_clicked();
 
@@ -58,7 +58,6 @@ private slots:
 
     void on_pushButton_28_clicked();
 
-    void on_quitrdv_clicked();
 
     void on_pushButton_22_clicked();
 
@@ -77,6 +76,18 @@ private slots:
     void on_bttrirdv_clicked();
 
     void on_btajoutRdv_2_clicked();
+
+
+
+    void on_imprimer_clicked();
+
+    void on_pushButton_41_clicked();
+
+
+
+
+
+    void on_recherche_rdv_textChanged(const QString &arg1);
 
 private:
     Ui::MainWindow *ui;

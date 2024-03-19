@@ -1,6 +1,8 @@
 #include "rendez_vous.h"
 #include <QDateEdit>
 #include<string>
+#include <QSqlQueryModel>
+#include <QSqlQuery>
 Rdv:: Rdv(int ID,QDate d ,int pr,QString t)
 {    type_r = t ;
      date_r = d;
@@ -20,6 +22,42 @@ bool Rdv::ajouterR ()
 
     return query.exec(); //exec() : envoie la requete pour l'executer
 
+}
+QMap<QString, int> Rdv::getRdvlStatisticsByType() {
+    QMap<QString, int> statistics;
+
+    // Récupérer tous les rdv de la base de données
+    QVector<QStringList> r = selectAllRdvByType();
+
+    // Parcourir les données pour compter le nombre de matériaux dans chaque catégorie
+    for (const QStringList& rdv : r) {
+        QString type = rdv.at(1); // L'indice 1 contient le type du rdv
+        if (statistics.contains(type)) {
+            statistics[type]++;
+        } else {
+            statistics[type] = 1;
+        }
+    }
+
+    return statistics;
+}
+QVector<QStringList> Rdv::selectAllRdvByType()
+{
+    QVector<QStringList> result;
+
+
+    // Execute the query
+    QSqlQuery query("SELECT * FROM RDV ORDER BY type_r");
+
+    while (query.next()) {
+        QStringList record;
+        for (int i = 0; i < query.record().count(); ++i) {
+            record << query.value(i).toString();
+        }
+        result << record;
+    }
+
+    return result;
 }
 QVector<QStringList> Rdv::selectAllRdv()
 {
@@ -92,23 +130,10 @@ bool Rdv::supprimerR (int idre)
       return query.exec();
 
 }
-QSqlQueryModel * Rdv::rechercherR(const QString &x)
-{
-    QSqlQueryModel * model = new QSqlQueryModel();
 
-        model->setQuery("select * from rdv where ((ids || type || dates || prix ) LIKE '%"+x+"%')");
- return model;
 
-}
-QSqlQueryModel * Rdv::trierR(const QString &critere, const QString &mode )
-{
-    QSqlQueryModel * model= new QSqlQueryModel();
 
-model->setQuery("select * from rdv order by "+critere+" "+mode+"");
 
-    return model;
-
-}
 bool Rdv::modifierR(int idr,QDate date_r, int prix_r, QString type_r)
 {
 
@@ -122,3 +147,82 @@ bool Rdv::modifierR(int idr,QDate date_r, int prix_r, QString type_r)
 
     return query.exec();
 }
+
+///
+
+
+QVector<QStringList> Rdv::selectAllRdvTri()
+{
+    QVector<QStringList> result;
+
+    // Execute the query
+    QSqlQuery query("SELECT * FROM rdv ORDER BY PRIX_R DESC");
+
+    while (query.next()) {
+        QStringList record;
+        for (int i = 0; i < query.record().count(); ++i) {
+            record << query.value(i).toString();
+        }
+        result << record;
+    }
+
+    return result;
+}
+
+void Rdv::displayRdvInListViewTri(QListView* listView)
+{
+
+    QVector<QStringList> data = selectAllRdvTri();
+
+
+    QStringListModel* model = new QStringListModel();
+
+    // Iterate through the data and add it to the model
+    for (const QStringList& record : data) {
+        model->insertRow(model->rowCount());
+        QModelIndex index = model->index(model->rowCount() - 1, 0);
+        model->setData(index, record.join(", ")); // You can customize the separator as needed
+    }
+
+    // Set the model for the QListView
+    listView->setModel(model);
+
+    // Optionally, set the view mode (e.g., ListMode)
+    listView->setViewMode(QListView::ListMode);
+
+    // Optionally, set other properties or customize the appearance
+
+    // Show the QListView
+    listView->show();
+}
+bool Rdv::displayRdvListViewUpdated(QListView* listView, QVector<QStringList> data)
+{
+    // Vérifie si listView est un pointeur valide vers votre QListView
+    if (!listView)
+        return false;
+
+    // Prépare un QStringListModel pour contenir les données
+    QStringListModel* model = new QStringListModel();
+
+    // Itérer à travers les données et les ajouter au modèle
+    for (const QStringList& record : data) {
+        model->insertRow(model->rowCount());
+        QModelIndex index = model->index(model->rowCount() - 1, 0);
+        model->setData(index, record.join(", ")); // Vous pouvez personnaliser le séparateur au besoin
+    }
+
+    // Définir le modèle pour le QListView
+    listView->setModel(model);
+
+    // Facultativement, définir le mode d'affichage (par exemple, ListMode)
+    listView->setViewMode(QListView::ListMode);
+
+    // Facultativement, définir d'autres propriétés ou personnaliser l'apparence
+
+    // Afficher le QListView
+    listView->show();
+
+    return true;
+}
+
+

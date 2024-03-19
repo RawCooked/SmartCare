@@ -32,6 +32,10 @@ public:
     QSqlQueryModel* afficher();
     bool supprimer(int ID_C);
     bool modifier(int ide,QString nom,QString prenom,QString etat,QString sexe,double salaire);
+    QSqlQueryModel * rechercher (QString aux);
+    QSqlQueryModel *  trier(QString critere, QString mode );
+    int NbreEmploye();
+    QMap<QString, int> getEmployeStatisticsByCategory();
 };
 QVector<QStringList> selectAllEmp();
 void displayEmployesInListView(QListView* listView);

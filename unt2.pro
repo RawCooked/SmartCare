@@ -1,5 +1,5 @@
-QT       += core gui sql multimedia widgets printsupport
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+QT       += core gui sql multimedia network widgets printsupport charts
+greaterThan(QT_MAJOR_VERSION, 4): QT += widgets charts
 
 CONFIG += c++11
 

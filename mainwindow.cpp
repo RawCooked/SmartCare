@@ -12,12 +12,21 @@
 #include <QTextDocument>
 #include <QDesktopServices>
 #include <QUrl>
+#include <QtPrintSupport/QPrintDialog>
+#include <QtWidgets/QWidget>
+#include <QtWidgets/QVBoxLayout>
+#include <QtCharts/QLineSeries>
+#include <QtCharts/QChart>
+#include <QtCharts/QChartView>
+#include <QtCharts>
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
     changeWidget(1);
+    Employe E;
+    ui->Nbre_emp->setText(QString::number(E.NbreEmploye())+" Employes");
 }
 
 MainWindow::~MainWindow()
@@ -138,40 +147,42 @@ void MainWindow::on_pushButton_24_clicked()
 void MainWindow::on_Ajouter_emp_clicked()
 {
     //int ID_C=ui->le_ID_C->text().toInt();
-    int ide=20;
-    QString NOM=ui->NomEmp->text();
-    QString PRENOM=ui->PrenomEmp->text();
-    QString Etat=ui->EtatEmp->currentText();
-    double salaire=ui->salaireEmp->text().toInt();
+    int ide = 20;
+    QString NOM = ui->NomEmp->text();
+    QString PRENOM = ui->PrenomEmp->text();
+    QString Etat = ui->EtatEmp->currentText();
+    double salaire = ui->salaireEmp->text().toDouble();
     QString sexe;
+
     if (ui->Homme->isChecked())
-        sexe="Homme";
+        sexe = "Homme";
     else if (ui->Femme->isChecked())
-        sexe="femme";
-       /*ui->NOM->setMaxLength(20);
-       ui->PRENOM->setMaxLength(20);*/
+        sexe = "Femme";
 
+    if (ui->NomEmp->text().isEmpty() || ui->PrenomEmp->text().isEmpty() || ui->salaireEmp->text().isEmpty() || (ui->Homme->isChecked() == false && ui->Femme->isChecked() == false)) {
+        QMessageBox::critical(nullptr, QObject::tr("Champs vides"),
+                              QObject::tr("Veuillez remplir tous les champs."), QMessageBox::Cancel);
+    } else {
+        Employe E(ide, NOM, PRENOM, Etat, sexe, salaire);
+        cout << ide << salaire << endl;
 
-    Employe E  (ide,NOM,PRENOM,Etat,sexe,salaire);
-    cout <<ide<<salaire<<endl;
-    //Employe E  (0,"saif","chkili","docteur","homme",170);
-
-bool test=E.ajouter();
-if(test)
- {    QMessageBox::information(nullptr, QObject::tr("ajout avec succes"),
-                               QObject::tr("ajout successful.\n"
-                                           "Click Cancel to exit."), QMessageBox::Cancel);
-  //ui->tab_emp->setModel(E.afficher());
-    displayEmployesInListView(ui->tab_emp);
-           }
-               else
-                   QMessageBox::critical(nullptr, QObject::tr("Ajout errer"),
-                               QObject::tr("ajout failed.\n"
-                                           "Click Cancel to exit."), QMessageBox::Cancel);
-//ui->tab_emp->setModel(E.afficher());
-  displayEmployesInListView(ui->tab_emp);
-
+        bool test = E.ajouter();
+        if (test) {
+            QMessageBox::information(nullptr, QObject::tr("ajout avec succes"),
+                                     QObject::tr("ajout successful.\n"
+                                                 "Click Cancel to exit."), QMessageBox::Cancel);
+            ui->tab_emp->setModel(E.afficher());
+            //displayEmployesInListView(ui->tab_emp);
+        } else {
+            QMessageBox::critical(nullptr, QObject::tr("Ajout errer"),
+                                  QObject::tr("ajout failed.\n"
+                                              "Click Cancel to exit."), QMessageBox::Cancel);
+        }
+        ui->tab_emp->setModel(E.afficher());
+       // displayEmployesInListView(ui->tab_emp);
+    }
 }
+
 
 void MainWindow::on_supprimer_emp_clicked()
 {
@@ -183,15 +194,15 @@ void MainWindow::on_supprimer_emp_clicked()
         QMessageBox::information(nullptr,QObject::tr("OK"),
                 QObject::tr("Suppression effectuée\n"
                             "Click Cancel non to exit.") , QMessageBox :: Cancel);
-        //ui->tab_emp->setModel(E.afficher());
-          displayEmployesInListView(ui->tab_emp2);
+        ui->tab_emp->setModel(E.afficher());
+          //displayEmployesInListView(ui->tab_emp2);
     }
     else
         QMessageBox::critical(nullptr,QObject::tr("Not OK"),
                               QObject::tr("Suppression non effectuée.\n"
                                           "Click Cancel to exit."),QMessageBox::Cancel);
-    //ui->tab_emp->setModel(E.afficher());
-      displayEmployesInListView(ui->tab_emp2);
+    ui->tab_emp->setModel(E.afficher());
+     // displayEmployesInListView(ui->tab_emp2);
 }
 
 void MainWindow::on_modifier_emp_clicked()
@@ -209,7 +220,10 @@ void MainWindow::on_modifier_emp_clicked()
        /*ui->NOM->setMaxLength(20);
        ui->PRENOM->setMaxLength(20);*/
 
-
+    if (ui->NomEmp_modifier->text().isEmpty() || ui->PrenomEmp_modifier->text().isEmpty() || ui->salaireEmp_modifier->text().isEmpty() || (ui->Homme_modifier->isChecked() == false && ui->Femme_modifier->isChecked() == false)) {
+        QMessageBox::critical(nullptr, QObject::tr("Champs vides"),
+                              QObject::tr("Veuillez remplir tous les champs."), QMessageBox::Cancel);
+    } else {
     Employe E  (ide,NOM,PRENOM,Etat,sexe,salaire);
            bool test=E.modifier(ide,NOM,PRENOM,Etat,sexe,salaire);
             if (test)
@@ -223,28 +237,26 @@ void MainWindow::on_modifier_emp_clicked()
             QMessageBox::critical(nullptr,QObject::tr("Not OK"),
                                   QObject::tr("Modification non effectuée.\n"
                                               "Click Cancel to exit."),QMessageBox::Cancel);
-        //ui->tab_emp3->setModel((C.afficher()));
-            displayEmployesInListView(ui->tab_emp3);
+        ui->tab_emp3->setModel((E.afficher()));
+           // displayEmployesInListView(ui->tab_emp3);
+        }
 }
-
-void MainWindow::on_refresh_emp0_clicked()
-{
-    displayEmployesInListView(ui->tab_emp0);
-}
-
 void MainWindow::on_refresh_emp_clicked()
 {
-    displayEmployesInListView(ui->tab_emp);
+    Employe E;
+    ui->tab_emp->setModel((E.afficher()));
 }
 
 void MainWindow::on_refresh_emp2_clicked()
 {
-    displayEmployesInListView(ui->tab_emp2);
+    Employe E;
+    ui->tab_emp2->setModel((E.afficher()));
 }
 
 void MainWindow::on_refresh_emp3_clicked()
 {
-    displayEmployesInListView(ui->tab_emp3);
+    Employe E;
+    ui->tab_emp3->setModel((E.afficher()));
 }
 
 void MainWindow::on_Exporter_pdf_emp_clicked()
@@ -288,3 +300,63 @@ void MainWindow::on_Exporter_pdf_emp_clicked()
            // Open the PDF using the default application
            QDesktopServices::openUrl(QUrl::fromLocalFile("C:/Users/chche/OneDrive/Desktop/emp.pdf"));
 }
+
+void MainWindow::on_tri_emp_clicked()
+{
+    Employe E;
+QString critere=ui->critere_tri_emp->currentText();
+QString ordre;
+if (ui->croissant_emp->isChecked())
+    ordre="ASC";
+else if (ui->dcroissat_emp->isChecked())
+    ordre="DESC";
+ui->tab_emp0->setModel(E.trier(critere,ordre));
+}
+
+void MainWindow::on_recherche_emp_clicked()
+{
+    Employe E;
+    QString aux=ui->Recherche_emp->text();
+    ui->tab_emp0->setModel(E.rechercher(aux));
+}
+void MainWindow::on_refresh_emp0_clicked()
+{
+    Employe E;
+    ui->tab_emp0->setModel(E.afficher());
+    QMap<QString, int> employeStatisticsByCategory = E.getEmployeStatisticsByCategory();
+
+    // Créer un nouveau graphique
+    QChart *chart = new QChart();
+
+    // Ajouter les données au graphique
+    QBarSeries *series = new QBarSeries();
+    for (auto it = employeStatisticsByCategory.begin(); it != employeStatisticsByCategory.end(); ++it) {
+        QBarSet *set = new QBarSet(it.key());
+        *set << it.value();
+        series->append(set);
+    }
+
+    chart->addSeries(series);
+    chart->createDefaultAxes();
+
+    // Supprimer le layout précédent
+    if (ui->widget_7->layout()) {
+        QLayoutItem *child;
+        while ((child = ui->widget_7->layout()->takeAt(0)) != nullptr) {
+            delete child->widget();
+            delete child;
+        }
+    }
+
+    // Créer un nouveau layout si nécessaire
+    if (!ui->widget_7->layout()) {
+        QVBoxLayout *mainLayout = new QVBoxLayout(ui->widget_7);
+        ui->widget_7->setLayout(mainLayout);
+    }
+
+    // Ajouter le graphique au layout
+    QChartView *chartView = new QChartView(chart);
+    chartView->setRenderHint(QPainter::Antialiasing);
+    ui->widget_7->layout()->addWidget(chartView);
+}
+

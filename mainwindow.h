@@ -64,6 +64,12 @@ private slots:
 
     void on_Exporter_pdf_emp_clicked();
 
+    void on_recherche_emp_2_clicked();
+
+    void on_tri_emp_clicked();
+
+    void on_recherche_emp_clicked();
+
 private:
     Ui::MainWindow *ui;
 };

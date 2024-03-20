@@ -5,17 +5,19 @@ materiel::materiel(int id,std::string n,std::string c,std::string e)
     id_mat=id ;
     nom_mat=n ;
 
-    categorie=c ;
     etat=e ;
+    categorie=c ;
 }
 materiel::materiel(std::string n,std::string c,std::string e)
 {
 
     nom_mat=n ;
-
-    categorie=c ;
     etat=e ;
+    categorie=c ;
+
 }
+materiel::materiel()
+    : id_mat(0), nom_mat(""),  etat(""),categorie("") {}
 
 materiel::~materiel()
 {
@@ -55,3 +57,5 @@ void materiel::etatSet(std::string& newetat)
 {
     etat = newetat ;
 }
+
+

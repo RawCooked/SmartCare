@@ -2,6 +2,11 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QPrinter>
+#include <QPainter>
+#include <QTextDocument>
+#include <QDesktopServices>
+#include <QUrl>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -38,15 +43,7 @@ private slots:
 
     void on_pushButton_5_clicked();
 
-    void on_pushButton_9_clicked();
 
-    void on_pushButton_14_clicked();
-
-    void on_pushButton_59_clicked();
-
-    void on_pushButton_24_clicked();
-
-    void on_pushButton_15_clicked();
 
     void on_pushButton_16_clicked();
 
@@ -54,9 +51,18 @@ private slots:
 
     void on_pushButton_23_clicked();
 
-    void on_pushButton_27_clicked();
 
     void on_pushButton_28_clicked();
+
+    void on_pushButton_35_clicked();
+
+    void on_pushButton_42_clicked();
+
+    void on_pushButton_59_clicked();
+
+    void on_pushButton_41_clicked();
+
+    void on_pushButton_60_clicked();
 
 private:
     Ui::MainWindow *ui;

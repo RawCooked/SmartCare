@@ -48,6 +48,8 @@ void MainWindow::changeWidget(int i){
     ui->Employe->hide();
     ui->Rdv->hide();
     ui->widget_17->hide();
+    ui->widget_40->hide();
+     ui->widget_43->hide();
 
 
     switch (i){
@@ -95,7 +97,9 @@ void MainWindow::on_pushButton_3_clicked()
 
 void MainWindow::on_Rdv_top_clicked()
 {
-
+    ui->widget_40->show();
+    ui->widget_43->hide();
+    ui->Rdv->hide();
 }
 
 void MainWindow::on_pushButton_4_clicked()
@@ -206,6 +210,8 @@ void MainWindow::on_btajoutRdv_clicked()
         QString type = ui->TypeRdv_1->text();
         QDate date = ui->DateRdv_1->date();
         int prix = ui->prixRdv1->text().toInt();
+        // Formater la date dans le format "jour mois année"
+            QString formattedDate = date.toString("dd MMMM yyyy");
 
         // Instanciation d'un objet de la classe 'rdv' en utilisant les informations saisies
         Rdv R(0,date,prix,type);
@@ -255,11 +261,27 @@ void MainWindow::on_pushButton_50_clicked()
 
 void MainWindow::on_btsuppRdv_clicked()
 {
+    QVector<QStringList> finalList;
+    QPushButton button("Oops! vous venez de perdre un rendez_vous!");
+        button.show();
+
+        QPropertyAnimation animation(&button, "geometry");
+        animation.setDuration(3000);
+        animation.setStartValue(QRect(500, 500, 200, 30));
+        animation.setEndValue(QRect(600, 400, 300, 50));
+
+
+
+        animation.start();
     click->setMedia(QUrl::fromLocalFile("C:/Users/Dell/Desktop/SmartCare/Click.mp3"));
         click->play();
         qDebug()<<click ->errorString();
         int idr=ui->idr_1->value();
             bool test=r.supprimerR(idr);
+            bool test2=r.displayRdvListViewUpdated( ui->listView1_rdv, finalList);
+            if (test2)
+            {
+
             if (test)
               {
 
@@ -273,6 +295,13 @@ void MainWindow::on_btsuppRdv_clicked()
                                      ,QMessageBox::Cancel);
 
               }
+            }
+            else
+            {
+                QMessageBox::critical(nullptr , QObject::tr("!"),
+                                                     QObject::tr("rdv inexistant.\n""Click cancel to exist.")
+                                                     ,QMessageBox::Cancel);
+            }
 }
 
 void MainWindow::on_btmdfrdv_clicked()
@@ -534,4 +563,84 @@ void MainWindow::on_recherche_rdv_textChanged(const QString &arg1)
             if (arg1.isEmpty()) {
                 r.displayRdvInListView(ui->listView1_rdv);
             }
+}
+void MainWindow::on_calendarWidget_clicked(const QDate &date)
+{
+    qDebug() << "Selected Date: " << date;
+
+    // Vérifier si la date est un samedi ou un dimanche
+    if (date.dayOfWeek() == Qt::Saturday || date.dayOfWeek() == Qt::Sunday)
+    {
+        QMessageBox::information(this, "Jour de congé", "C'est un jour de congé.");
+        return; // Sortir de la fonction sans ajouter le QTableView
+    }
+    else
+    {
+        ui->widget_43->show();
+    // Supprimer tous les QTableView précédents du conteneur
+    QLayoutItem* item;
+    while ((item = ui->horizontalLayout_2->takeAt(0)) != nullptr)
+    {
+        delete item->widget();
+        delete item;
+    }
+
+    // Création d'un objet QTableView
+    QTableView* tableView = new QTableView(this);
+    // Paramètres de configuration optionnels pour le QTableView
+    tableView->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+    tableView->horizontalHeader()->setStretchLastSection(true);
+
+    QSqlQuery query;
+    // Exécution de la requête pour récupérer les rendez-vous selon la date
+    query.prepare("SELECT idr,type_r,prix_r FROM rdv WHERE date_r = :date");
+    query.bindValue(":date", date);
+
+    if (!query.exec())
+    {
+        qDebug() << "Erreur lors de l'exécution de la requête";
+        // Gérer l'erreur ici
+    }
+
+    // Création du modèle de données
+    QStandardItemModel* model = new QStandardItemModel();
+    model->setColumnCount(3);
+    model->setHeaderData(0, Qt::Horizontal, "ID");
+    model->setHeaderData(1, Qt::Horizontal, "Type");
+    model->setHeaderData(2, Qt::Horizontal, "Prix");
+
+    int row = 0;
+    while (query.next())
+    {
+        int id = query.value(0).toInt();
+        QString type = query.value(1).toString();
+        int prix = query.value(2).toInt();
+
+        // Ajouter les données à chaque colonne du modèle
+        model->setItem(row, 0, new QStandardItem(QString::number(id)));
+        model->setItem(row, 1, new QStandardItem(type));
+        model->setItem(row, 2, new QStandardItem(QString::number(prix)));
+
+        row++;
+    }
+
+    // Appliquer le modèle au QTableView
+    tableView->setModel(model);
+
+    // Ajouter le QTableView au conteneur approprié dans votre interface utilisateur
+    ui->horizontalLayout_2->addWidget(tableView);
+    }
+}
+
+void MainWindow::on_calendarWidget_currentPageChanged(int year, int month)
+{
+    qDebug() << "Selected Year : " << year;
+    qDebug() << "Selected Month : " << month;
+}
+
+void MainWindow::on_pushButton_16_clicked()
+{
+    ui->widget_40->show();
+    ui->widget_43->hide();
+     ui->Rdv->hide();
 }

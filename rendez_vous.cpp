@@ -225,4 +225,3 @@ bool Rdv::displayRdvListViewUpdated(QListView* listView, QVector<QStringList> da
     return true;
 }
 
-

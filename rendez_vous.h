@@ -42,5 +42,6 @@ public:
     QVector<QStringList> selectAllRdvByType();
     QMap<QString, int> getRdvlStatisticsByType();
     bool displayRdvListViewUpdated(QListView* listView, QVector<QStringList> data);
+
 };
 #endif // RENDEZ_VOUS_H

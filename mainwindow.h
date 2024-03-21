@@ -82,12 +82,13 @@ private slots:
     void on_imprimer_clicked();
 
     void on_pushButton_41_clicked();
-
-
-
-
-
     void on_recherche_rdv_textChanged(const QString &arg1);
+
+    void on_calendarWidget_clicked(const QDate &date);
+
+    void on_calendarWidget_currentPageChanged(int year, int month);
+
+    void on_pushButton_16_clicked();
 
 private:
     Ui::MainWindow *ui;

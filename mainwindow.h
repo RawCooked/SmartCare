@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "qtrpt.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -22,11 +23,9 @@ private slots:
 
     void changeWidget(int);
 
-    void on_pushButton_clicked();
 
     void on_pushButton_3_clicked();
 
-    void on_Rdv_top_clicked();
 
     void on_pushButton_4_clicked();
 
@@ -42,11 +41,67 @@ private slots:
 
     void on_pushButton_14_clicked();
 
-    void on_pushButton_59_clicked();
 
-    void on_PrixTrait_4_textChanged(const QString &arg1);
 
     void on_pushButton_24_clicked();
+
+
+    void on_pushButton_25_clicked();
+
+    void on_pushButton_26_clicked();
+
+    void on_pushButton_30_clicked();
+
+    void on_pushButton_29_clicked();
+
+    void on_DashboardButton_clicked();
+
+    void on_pushButton_13_clicked();
+
+
+
+    void on_listView_doubleClicked(const QModelIndex &index);
+
+    void on_lineEdit_textChanged(const QString &arg1);
+
+    void on_radioTri_toggled(bool checked);
+
+    void on_listView_11_clicked(const QModelIndex &index);
+
+    void on_pushButton_12_clicked();
+
+    void on_pushButton_15_clicked();
+
+
+
+    void on_pushButton_18_clicked();
+
+    void on_pushButton_37_clicked();
+
+    void on_pushButton_47_clicked();
+
+    void on_UpdatePat_clicked();
+
+    void on_pushButton_48_clicked();
+
+    void on_pushButton_56_clicked();
+
+    void on_pushButton_38_clicked();
+
+    void on_qr_clicked();
+
+    void on_listView_11_indexesMoved(const QModelIndexList &indexes);
+
+
+
+
+    void on_pushButton_22_clicked();
+
+
+
+    void on_lineEdit_2_textChanged(const QString &arg2);
+
+    void on_radioTri_2_toggled(bool checked1);
 
 private:
     Ui::MainWindow *ui;

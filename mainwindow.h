@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "qtrpt.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -89,7 +90,6 @@ private slots:
 
     void on_qr_clicked();
 
-    void on_listView_11_indexesMoved(const QModelIndexList &indexes);
 
 
 

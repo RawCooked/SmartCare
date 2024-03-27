@@ -17,16 +17,21 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
     connexion.cpp \
     employe.cpp \
+    loginwindow.cpp \
     main.cpp \
     mainwindow.cpp \
-    traitement.cpp
+    traitement.cpp \
+    users.cpp
 
 HEADERS += \
     connexion.h \
     employe.h \
+    loginwindow.h \
     mainwindow.h \
-    traitement.h
+    traitement.h \
+    users.h
 FORMS += \
+    loginwindow.ui \
     mainwindow.ui
 
 # Default rules for deployment.

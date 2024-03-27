@@ -2,6 +2,7 @@
 #include "ui_mainwindow.h"
 #include "connexion.h"
 #include "employe.h"
+#include "users.h"
 #include <iostream>
 #include<QTextStream>
 #include<QIntValidator>
@@ -19,6 +20,7 @@
 #include <QtCharts/QChart>
 #include <QtCharts/QChartView>
 #include <QtCharts>
+#include <random>
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -26,7 +28,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     changeWidget(1);
     Employe E;
-    ui->Nbre_emp->setText(QString::number(E.NbreEmploye())+" Employes");
+    //ui->Nbre_emp->setText(QString::number(E.NbreEmploye())+" Employes");
 }
 
 MainWindow::~MainWindow()
@@ -153,7 +155,7 @@ void MainWindow::on_Ajouter_emp_clicked()
     QString Etat = ui->EtatEmp->currentText();
     double salaire = ui->salaireEmp->text().toDouble();
     QString sexe;
-
+    int idu=0;
     if (ui->Homme->isChecked())
         sexe = "Homme";
     else if (ui->Femme->isChecked())
@@ -164,13 +166,23 @@ void MainWindow::on_Ajouter_emp_clicked()
                               QObject::tr("Veuillez remplir tous les champs."), QMessageBox::Cancel);
     } else {
         Employe E(ide, NOM, PRENOM, Etat, sexe, salaire);
-        cout << ide << salaire << endl;
-
+        QString mdp=generateRandomString(4);
         bool test = E.ajouter();
-        if (test) {
-            QMessageBox::information(nullptr, QObject::tr("ajout avec succes"),
-                                     QObject::tr("ajout successful.\n"
-                                                 "Click Cancel to exit."), QMessageBox::Cancel);
+        QSqlQuery query;
+        QString queryString = "SELECT id_emp FROM Employe where nom_e='" + NOM + "' AND prenom_e='" + PRENOM + "' AND etat='" + Etat + "'";
+        if (query.exec(queryString)) {
+            if (query.next()) {
+                idu = query.value(0).toInt();
+            }
+        }
+       NOM+=generateRandomString(2);
+       users U(idu,NOM,mdp,Etat);
+        bool test0= U.ajouter();
+        if (test && test0) {
+            QString message = "ajouté avec succès\nVotre nom d'utilisateur est : " + NOM +
+                                  "\nVotre mot de passe est : " + mdp;
+
+                QMessageBox::information(nullptr, "Succès", message);
             ui->tab_emp->setModel(E.afficher());
             //displayEmployesInListView(ui->tab_emp);
         } else {
@@ -188,8 +200,10 @@ void MainWindow::on_supprimer_emp_clicked()
 {
     int ide=ui->id_emp->text().toInt();
     Employe E;
+    users u;
     bool test=E.supprimer(ide);
-    if (test)
+    bool test0=u.supprimer(ide);
+    if (test && test0)
     {
         QMessageBox::information(nullptr,QObject::tr("OK"),
                 QObject::tr("Suppression effectuée\n"
@@ -245,6 +259,7 @@ void MainWindow::on_refresh_emp_clicked()
 {
     Employe E;
     ui->tab_emp->setModel((E.afficher()));
+    ui->Nbre_emp->setText(QString::number(E.NbreEmploye())+" Employes");
 }
 
 void MainWindow::on_refresh_emp2_clicked()
@@ -261,45 +276,94 @@ void MainWindow::on_refresh_emp3_clicked()
 
 void MainWindow::on_Exporter_pdf_emp_clicked()
 {
+    Employe E;
     QPrinter printer;
-           printer.setOutputFormat(QPrinter::PdfFormat);
-           printer.setOutputFileName("C:/Users/chche/OneDrive/Desktop/emp.pdf");
-           QPainter painter;
+    printer.setOutputFormat(QPrinter::PdfFormat);
+    printer.setOutputFileName("C:/Users/chche/OneDrive/Desktop/emp.pdf");
+    QPainter painter;
 
-           if (! painter.begin(&printer)) { // failed to open file
-               qWarning("failed to open file, is it writable?");
-           }
+    if (!painter.begin(&printer)) {
+        qWarning("failed to open file, is it writable?");
+    }
 
-           QSqlQuery query;
-           qDebug() << query.prepare("select sysdate from dual ");
-           if (query.exec()) {
+    // Load images and resize
+    QImage imageLeft("C:/Users/chche/Downloads/feather/feather/Capture-removebg-preview.png");
 
-               if (query.next()) {
-                   // Extract the datetime from the query result
-                   QDateTime dateTime = query.value(0).toDateTime();
+    QSqlQuery query;
+    qDebug() << query.prepare("SELECT * FROM Employe");
+    if (query.exec()) {
+        // Draw left image
+        painter.drawImage(200, 50, imageLeft);
 
-                   // Format the datetime as a string
-                   QString dateTimeString = dateTime.toString("yyyy-MM-dd hh:mm:ss");
+        if (query.next()) {
+            QDateTime dateTime = query.value(0).toDateTime();
+            QString dateTimeString = dateTime.toString("yyyy-MM-dd hh:mm:ss");
 
-                   // Draw the datetime on the PDF
-                   painter.drawText(850, 50, dateTimeString);
+            // Draw the datetime on the PDF
+            painter.drawText(600, 50, dateTimeString);
 
-                   QPen penred(Qt::black);
-                   painter.setFont(QFont("Arial", 30));
-                   penred.setWidth(1);
-                   painter.setPen(penred);
+            QPen penred(Qt::red);
+            painter.setFont(QFont("Arial", 30));
+            penred.setWidth(1);
+            painter.setPen(penred);
 
-                   painter.drawText(350, 100, " Employés");
-                   painter.setFont(QFont("Arial", 30));
-                   painter.setPen(Qt::red);
-               }
-           }
-           // End the painting on the printer
-           painter.end();
+            QFontMetrics fm(painter.font());
+            QString employesText = " Employés";
+            QRect textRect = fm.boundingRect(0, 0, 1000, 1000, Qt::AlignCenter, employesText);
+            int xText = (printer.width() - textRect.width()) / 2; // Center horizontally
+            painter.drawText(xText, 100, employesText);
 
-           // Open the PDF using the default application
-           QDesktopServices::openUrl(QUrl::fromLocalFile("C:/Users/chche/OneDrive/Desktop/emp.pdf"));
+
+            painter.setFont(QFont("Arial", 15));
+            painter.setPen(Qt::blue);
+
+            // Draw table headers
+            painter.drawText(60, 180, "id");
+            painter.drawText(210, 180, "nom");
+            painter.drawText(360, 180, "prenom");
+            painter.drawText(510, 180, "etat");
+            painter.drawText(660, 180, "sexe");
+            painter.drawText(810, 180, "salaire");
+             painter.setPen(Qt::black);
+             // Draw table outline
+             painter.drawRect(50, 150, 900, 50 + 50 * E.NbreEmploye()); // Increased height for the header row
+            for (int i = 0; i < 6; ++i) {
+                painter.drawLine(50 + 150 * i, 150, 50 + 150 * i, 200 + 50 * E.NbreEmploye()); // Vertical lines
+            }
+            for (int i = 0; i < E.NbreEmploye(); ++i) {
+                painter.drawLine(50, 200 + 50 * i, 950, 200 + 50 * i); // Horizontal lines
+            }
+
+            int row = 0;
+            // Fetch and draw table data
+            do {
+                QString column1Data = query.value(0).toString();
+                QString column2Data = query.value(1).toString();
+                QString column3Data = query.value(2).toString();
+                QString column4Data = query.value(3).toString();
+                QString column5Data = query.value(4).toString();
+                QString column6Data = query.value(5).toString();
+                // Fetch more data as needed
+
+                painter.drawText(60, 230 + row * 50, column1Data);
+                painter.drawText(210, 230 + row * 50, column2Data);
+                painter.drawText(360, 230 + row * 50, column3Data);
+                painter.drawText(510, 230 + row * 50, column4Data);
+                painter.drawText(660, 230 + row * 50, column5Data);
+                painter.drawText(810, 230 + row * 50, column6Data);
+                // Draw more data as needed
+
+                ++row;
+            } while (query.next());
+        }
+    }
+
+    painter.end();
+    QDesktopServices::openUrl(QUrl::fromLocalFile("C:/Users/chche/OneDrive/Desktop/emp.pdf"));
 }
+
+
+
 
 void MainWindow::on_tri_emp_clicked()
 {
@@ -322,6 +386,7 @@ void MainWindow::on_recherche_emp_clicked()
 void MainWindow::on_refresh_emp0_clicked()
 {
     Employe E;
+    ui->Nbre_emp->setText(QString::number(E.NbreEmploye())+" Employes");
     ui->tab_emp0->setModel(E.afficher());
     QMap<QString, int> employeStatisticsByCategory = E.getEmployeStatisticsByCategory();
 

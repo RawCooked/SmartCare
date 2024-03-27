@@ -134,14 +134,17 @@ model->setQuery("select * from Employe order by "+crit+" "+mode+"");
 }
 int Employe::NbreEmploye()
 {
-    int rowCount;
-    QSqlQuery query;
-    QString queryString = QString("SELECT COUNT(*) FROM Employe");
-            if (query.exec(queryString)) {
-                if (query.next()) {
-                    rowCount = query.value(0).toInt();
+
+    QSqlDatabase db = QSqlDatabase::database(); // Assuming you have already set up your database connection
+        QSqlQuery query(db);
+            if (query.exec("SELECT COUNT(*) FROM Employe")) {
+                    if (query.next()) {
+                        return query.value(0).toInt(); // Assuming the count is returned as the first column
+                    }
                 }
-            }
+
+                // If there's an error or no rows returned, return -1 or handle the error as needed
+                return -1;
 }
 QMap<QString, int> Employe::getEmployeStatisticsByCategory() {
     QMap<QString, int> statistics;

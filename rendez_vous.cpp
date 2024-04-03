@@ -3,22 +3,24 @@
 #include<string>
 #include <QSqlQueryModel>
 #include <QSqlQuery>
-Rdv:: Rdv(int ID,QDate d ,int pr,QString t)
+Rdv:: Rdv(int ID,QDate d ,int pr,QString t,QString h)
 {    type_r = t ;
      date_r = d;
       idr=ID ;
        prix_r = pr;
+        heure_r=h;
 }
 bool Rdv::ajouterR ()
 {
     QSqlQuery query ;
     QString var2 = QString :: number (prix_r);
     // prepare() : prend la requete en parametre pour la preparer a l'execution
-    query.prepare("insert into RDV (TYPE_R,DATE_R,PRIX_R)""values (:type,:date,:prix)");
+    query.prepare("insert into rdvv (TYPE_R,DATE_R,PRIX_R,HEURE_R)""values (:type,:date,:prix,:heure)");
     //creation des variables liées
     query.bindValue(":type",type_r);
     query.bindValue(":date",date_r);
     query.bindValue(":prix",var2);
+    query.bindValue(":heure",heure_r);
 
     return query.exec(); //exec() : envoie la requete pour l'executer
 
@@ -47,7 +49,7 @@ QVector<QStringList> Rdv::selectAllRdvByType()
 
 
     // Execute the query
-    QSqlQuery query("SELECT * FROM RDV ORDER BY type_r");
+    QSqlQuery query("SELECT * FROM RDVV ORDER BY type_r");
 
     while (query.next()) {
         QStringList record;
@@ -64,7 +66,7 @@ QVector<QStringList> Rdv::selectAllRdv()
     QVector<QStringList> result;
 
     // Execute the query
-    QSqlQuery query("SELECT * FROM RDV");
+    QSqlQuery query("SELECT * FROM RDVV");
 
     while (query.next()) {
         QStringList record;
@@ -125,7 +127,7 @@ bool Rdv::supprimerR (int idre)
     QSqlQuery query;
       //QString ID_C=QString::number(ID_C);// conversion
 
-     query.prepare("Delete from RDV where idr = :id_r ");
+     query.prepare("Delete from RDVV where idr = :id_r ");
       query.bindValue(":id_r",idre);
       return query.exec();
 
@@ -134,16 +136,17 @@ bool Rdv::supprimerR (int idre)
 
 
 
-bool Rdv::modifierR(int idr,QDate date_r, int prix_r, QString type_r)
+bool Rdv::modifierR(int idr,QDate date_r, int prix_r, QString type_r,QString heure_r)
 {
 
     QSqlQuery query;
-    query.prepare("UPDATE rdv SET TYPE_R=:type_r, DATE_R=:date_r,PRIX_R=:prix_r WHERE IDR=:idr");
+    query.prepare("UPDATE rdvv SET TYPE_R=:type_r, DATE_R=:date_r,PRIX_R=:prix_r,HEURE_R=:heure_r WHERE IDR=:idr");
 
     query.bindValue(":idr", idr);
     query.bindValue(":type_r", type_r);
     query.bindValue(":date_r", date_r);
     query.bindValue(":prix_r", prix_r);
+    query.bindValue(":heure_r", heure_r);
 
     return query.exec();
 }
@@ -156,7 +159,7 @@ QVector<QStringList> Rdv::selectAllRdvTri()
     QVector<QStringList> result;
 
     // Execute the query
-    QSqlQuery query("SELECT * FROM rdv ORDER BY PRIX_R DESC");
+    QSqlQuery query("SELECT * FROM rdvv ORDER BY PRIX_R DESC");
 
     while (query.next()) {
         QStringList record;

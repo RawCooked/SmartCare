@@ -198,59 +198,103 @@ void MainWindow::on_pushButton_22_clicked()
 
 void MainWindow::on_btajoutRdv_clicked()
 {
-
-
-
     // Configuration du son de clic
-        click->setMedia(QUrl::fromLocalFile("C:/Users/Dell/Desktop/SmartCare/Click.mp3"));
-        click->play();
-        qDebug() << click->errorString(); // Affiche les messages d'erreur liés à la lecture du son
-        // Récupération des valeurs saisies dans les champs de l'interface utilisateur
+    click->setMedia(QUrl::fromLocalFile("C:/Users/Dell/Desktop/SmartCare/Click.mp3"));
+    click->play();
+    qDebug() << click->errorString(); // Affiche les messages d'erreur liés à la lecture du son
 
-        QString type = ui->TypeRdv_1->text();
-        QDate date = ui->DateRdv_1->date();
-        int prix = ui->prixRdv1->text().toInt();
-        // Formater la date dans le format "jour mois année"
-            QString formattedDate = date.toString("dd MMMM yyyy");
+    // Récupération des valeurs saisies dans les champs de l'interface utilisateur
+    QString type = ui->TypeRdv_1->text();
+    QDate date = ui->DateRdv_1->date();
+    int prix = ui->prixRdv1->text().toInt();
+    QString heure = ui->heureRdv_1->text();
 
-        // Instanciation d'un objet de la classe 'rdv' en utilisant les informations saisies
-        Rdv R(0,date,prix,type);
+    // Formater la date dans le format "jour mois année"
+    QString formattedDate = date.toString("dd MMMM yyyy");
 
-        // Appel de la méthode 'ajouterR()' pour ajouter le rdv à la base de données
+    // Instanciation d'un objet de la classe 'rdv' en utilisant les informations saisies
+    Rdv R(0, date, prix, type, heure);
 
-        if((type == "urgent" ||type == "nourgent") && (prix!=0)){
-            QMessageBox::information(this,"Ajout","les entrés sont valide" );
+    // Appel de la méthode 'ajouterR()' pour ajouter le rdv à la base de données
+    if ((type == "urgent" || type == "nourgent") && (prix != 0)) {
+        QMessageBox::information(this, "Ajout", "Les entrées sont valides");
 
         bool test = R.ajouterR();
-        if (test)
-        {
+        if (test) {
             // Mise à jour du modèle de la table dans l'interface utilisateur
-            //ui->listView1_rdv->setModel(r.afficherR());
+            // ui->listView1_rdv->setModel(r.afficherR());
+
+            // Calcul de la durée jusqu'à l'heure d'arrivée du rendez-vous
+            QTime currentTime = QTime::currentTime();
+            QTime appointmentTime = QTime::fromString(heure, "hh:mm");
+            int minutesRemaining = currentTime.secsTo(appointmentTime) / 60 - 10;
+
+            if (minutesRemaining > 0) {
+                // Création d'une minuterie pour afficher le message avant 10 minutes
+                QTimer::singleShot(minutesRemaining * 60 * 1000, this, [this]() {
+                    QMessageBox::information(this, "Rendez-vous", "Le rendez-vous est dans moins de 10 minutes !");
+                });
+            }
 
             // Affichage d'une boîte de dialogue informative en cas de succès
             QMessageBox::information(nullptr, QObject::tr("OK"),
                                      QObject::tr("Ajout effectué\n" "Click cancel to exist\n"), QMessageBox::Cancel);
-        }
-        else
-        {
+        } else {
             // Affichage d'une boîte de dialogue d'erreur en cas d'échec
             QMessageBox::critical(nullptr, QObject::tr("NOT OK"),
                                    QObject::tr("Ajout non effectué.\n""Click cancel to exist."),
                                    QMessageBox::Cancel);
         }
-        }
-
-        else
-            QMessageBox::warning(this,"sign in","les entrés ne sont pas valide");
-
-
-
+    } else {
+        QMessageBox::warning(this, "Sign in", "Les entrées ne sont pas valides");
+    }
 }
+void MainWindow::checkUpcomingAppointments()
+{
+    // Obtenir l'heure actuelle
+    QTime currentTime = QTime::currentTime();
 
+    // Requête SQL pour récupérer les rendez-vous à venir triés par ordre croissant d'heure avec l'ID
+    QSqlQuery query;
+    query.prepare("SELECT idr, heure_r FROM rdvv WHERE date_r >= :currentDate ORDER BY heure_r ASC");
+    query.bindValue(":currentDate", QDate::currentDate());
+
+    if (!query.exec()) {
+        qDebug() << "Erreur lors de l'exécution de la requête";
+        // Gérer l'erreur ici
+        return;
+    }
+
+    QString upcomingAppointmentsText;
+    bool upcomingAppointmentFound = false;
+
+    while (query.next()) {
+        int idRdv = query.value(0).toInt();
+        QString heureStr = query.value(1).toString();
+        QTime appointmentTime = QTime::fromString(heureStr, "hh:mm");
+
+        // Comparer l'heure actuelle avec l'heure du rendez-vous
+        if (currentTime < appointmentTime && currentTime.secsTo(appointmentTime) <= 600) { // 600 secondes = 10 minutes
+            upcomingAppointmentFound = true;
+
+            // Ajouter l'ID et l'heure du rendez-vous à la chaîne de caractères
+            upcomingAppointmentsText += QString::number(idRdv) + " - Rendez-vous à " + heureStr + "\n";
+        }
+    }
+
+    if (upcomingAppointmentFound) {
+        // Afficher la notification avec tous les rendez-vous
+        QMessageBox::information(this, "Rendez-vous imminent",
+                                 "Vous avez les rendez-vous suivants dans les 10 prochaines minutes:\n\n" + upcomingAppointmentsText);
+    } else {
+        qDebug() << "Aucun rendez-vous imminent trouvé";
+    }
+}
 void MainWindow::on_pushButton_40_clicked()
 {
     Rdv R;
     R.displayRdvInListView(ui->listView1_rdv);
+
 }
 
 void MainWindow::on_pushButton_50_clicked()
@@ -312,15 +356,15 @@ void MainWindow::on_btmdfrdv_clicked()
         int idr = ui->idr_3->text().toInt();
         QString type = ui->TypeRdv_2->text();
         QDate date= ui->DateRdv_2->date();
-
+         QString heure = ui->heureRdv_2->text();
         int prix = ui->prixRdv_2->text().toInt();
 
 
 
-        Rdv R(idr,date,prix,type);
+        Rdv R(idr,date,prix,type,heure);
 
         if((type == "urgent" ||type == "nourgent") && (prix!=0)){
-            bool test =r.modifierR(idr,date,prix,type);
+            bool test =r.modifierR(idr,date,prix,type,heure);
             QMessageBox::information(this,"Ajout","les entrés sont valide" );
         if(test)
         {//ui->listView3_rdv->setModel(r.afficherR());
@@ -426,7 +470,7 @@ void MainWindow::on_btajoutRdv_2_clicked()
            }
 
        }
-       QString type_r, idr, prix_r, date_r;
+       QString type_r, idr, prix_r, date_r,heure_r;
        QSqlQuery qry;
        int i = 250; // Position verticale de départ du tableau
        int k = 0;
@@ -437,7 +481,7 @@ void MainWindow::on_btajoutRdv_2_clicked()
        int tableStartY = (pageHeight - (k / 13 + 1) * tableHeight) / 2; // Calcul de la position verticale de départ du tableau
        int tableStartX = (pageWidth - tableWidth) / 2 + 200; // Augmentation de la position horizontale de départ du tableau
 
-       if (qry.exec("select * from rdv"))
+       if (qry.exec("select * from rdvv"))
        {
            while (qry.next())
            {
@@ -451,6 +495,7 @@ void MainWindow::on_btajoutRdv_2_clicked()
                    painter.drawText(tableStartX + 90, i - 50, "Type");
                    painter.drawText(tableStartX + 230, i - 50, "Date");
                    painter.drawText(tableStartX + 420, i - 50, "Prix");
+                   painter.drawText(tableStartX + 555, i - 50, "Heure");
                }
 
                painter.setFont(QFont("Arial", 10));
@@ -468,6 +513,9 @@ void MainWindow::on_btajoutRdv_2_clicked()
                j++;
                prix_r = qry.value(3).toString();
                painter.drawText(tableStartX + j * 139, i, prix_r);
+               j++;
+               heure_r = qry.value(4).toString();
+               painter.drawText(tableStartX + j * 141, i, heure_r);
                j++;
                i += tableHeight; // Passage à la ligne suivante du tableau
                k++;
@@ -593,7 +641,7 @@ void MainWindow::on_calendarWidget_clicked(const QDate &date)
 
     QSqlQuery query;
     // Exécution de la requête pour récupérer les rendez-vous selon la date
-    query.prepare("SELECT idr,type_r,prix_r FROM rdv WHERE date_r = :date");
+    query.prepare("SELECT idr,type_r,prix_r,heure_r FROM rdvv WHERE date_r = :date ORDER BY heure_r ASC");
     query.bindValue(":date", date);
 
     if (!query.exec())
@@ -604,10 +652,11 @@ void MainWindow::on_calendarWidget_clicked(const QDate &date)
 
     // Création du modèle de données
     QStandardItemModel* model = new QStandardItemModel();
-    model->setColumnCount(3);
+    model->setColumnCount(4);
     model->setHeaderData(0, Qt::Horizontal, "ID");
     model->setHeaderData(1, Qt::Horizontal, "Type");
     model->setHeaderData(2, Qt::Horizontal, "Prix");
+    model->setHeaderData(3, Qt::Horizontal, "Heure");
 
     int row = 0;
     while (query.next())
@@ -615,11 +664,13 @@ void MainWindow::on_calendarWidget_clicked(const QDate &date)
         int id = query.value(0).toInt();
         QString type = query.value(1).toString();
         int prix = query.value(2).toInt();
+        QString heure = query.value(3).toString();
 
         // Ajouter les données à chaque colonne du modèle
         model->setItem(row, 0, new QStandardItem(QString::number(id)));
         model->setItem(row, 1, new QStandardItem(type));
         model->setItem(row, 2, new QStandardItem(QString::number(prix)));
+        model->setItem(row, 3, new QStandardItem(heure));
 
         row++;
     }
@@ -643,4 +694,9 @@ void MainWindow::on_pushButton_16_clicked()
     ui->widget_40->show();
     ui->widget_43->hide();
      ui->Rdv->hide();
+}
+
+void MainWindow::on_pushButton_10_clicked()
+{
+    checkUpcomingAppointments();
 }

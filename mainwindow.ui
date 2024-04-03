@@ -45786,7 +45786,7 @@ p, li { white-space: pre-wrap; }
       <enum>QTabWidget::Triangular</enum>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>1</number>
      </property>
      <property name="movable">
       <bool>true</bool>
@@ -52532,6 +52532,16 @@ font-size:20px;</string>
            <widget class="QDateEdit" name="DateRdv_1"/>
           </item>
           <item>
+           <widget class="QLabel" name="label_26">
+            <property name="text">
+             <string>heure</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="heureRdv_1"/>
+          </item>
+          <item>
            <widget class="QLabel" name="label_63">
             <property name="text">
              <string>prix</string>
@@ -56034,7 +56044,7 @@ color :white;
           <x>20</x>
           <y>130</y>
           <width>391</width>
-          <height>161</height>
+          <height>211</height>
          </rect>
         </property>
         <property name="palette">
@@ -56488,7 +56498,7 @@ color :white;
            <x>40</x>
            <y>10</y>
            <width>291</width>
-           <height>146</height>
+           <height>196</height>
           </rect>
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_11">
@@ -56521,6 +56531,16 @@ color :white;
           </item>
           <item>
            <widget class="QDateEdit" name="DateRdv_2"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_27">
+            <property name="text">
+             <string>heure</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="heureRdv_2"/>
           </item>
           <item>
            <widget class="QLabel" name="label_96">
@@ -57972,7 +57992,7 @@ color :white;
         <property name="geometry">
          <rect>
           <x>320</x>
-          <y>330</y>
+          <y>350</y>
           <width>93</width>
           <height>28</height>
          </rect>
@@ -63810,8 +63830,6 @@ QCalendarWidget QAbstractItemView:disabled
      </property>
     </widget>
    </widget>
-   <zorder>widget_17</zorder>
-   <zorder>widget</zorder>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <widget class="QMenuBar" name="menubar">

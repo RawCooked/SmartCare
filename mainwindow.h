@@ -89,6 +89,9 @@ private slots:
     void on_calendarWidget_currentPageChanged(int year, int month);
 
     void on_pushButton_16_clicked();
+    void checkUpcomingAppointments();
+
+    void on_pushButton_10_clicked();
 
 private:
     Ui::MainWindow *ui;

@@ -21,6 +21,11 @@
 #include <QtCharts/QChartView>
 #include <QtCharts>
 #include <random>
+#include <QNetworkAccessManager>
+#include <QNetworkReply>
+#include <QJsonDocument>
+#include <QJsonObject>
+#include <QJsonValue>
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -424,4 +429,86 @@ void MainWindow::on_refresh_emp0_clicked()
     chartView->setRenderHint(QPainter::Antialiasing);
     ui->widget_7->layout()->addWidget(chartView);
 }
+
+
+void MainWindow::on_translate_clicked()
+{
+    QString url = "http://translate.googleapis.com/translate_a/single?client=gtx";
+    QString l1,l2;
+    if (ui->l1->currentText() == "english") {
+        l1 = "en";
+    } else if (ui->l1->currentText() == "french") {
+        l1 = "fr";
+    } else if (ui->l1->currentText() == "arabic") {
+        l1 = "ar";
+    }
+
+
+    if (ui->l2->currentText() == "english") {
+        l2 = "en";
+    } else if (ui->l2->currentText() == "french") {
+        l2 = "fr";
+    } else if (ui->l2->currentText() == "arabic") {
+        l2 = "ar";
+    }
+
+    url.append("&sl="+l1+"&tl="+l2+"&dt=t&q=");
+    url.append(ui->texttotranslate->text());
+    qInfo() << "url: " + url;
+
+    // Make an HTTP request
+    QNetworkAccessManager *nam = new QNetworkAccessManager();
+    connect(nam, SIGNAL(finished(QNetworkReply*)), this, SLOT(onTranslationReceived(QNetworkReply*)));
+    nam->get(QNetworkRequest(QUrl(url)));
+ }
+void MainWindow::onTranslationReceived(QNetworkReply* reply)
+{
+    // Check for errors
+    if (reply->error() != QNetworkReply::NoError) {
+        qWarning() << "Network error: " << reply->errorString();
+        return;
+    }
+
+    // Parse the response
+    QByteArray responseData = reply->readAll();
+    qInfo() << "Response data:" << responseData; // Debug output
+
+    QJsonDocument jsonResponse = QJsonDocument::fromJson(responseData);
+
+    // Check if parsing was successful
+    if (jsonResponse.isNull()) {
+        qWarning() << "Failed to parse JSON response";
+        return;
+    }
+
+    // Assuming the JSON response structure
+    QJsonArray translationArray = jsonResponse.array();
+    if (translationArray.isEmpty()) {
+        qWarning() << "Translation array is empty";
+        return;
+    }
+
+    QJsonArray translationGroupArray = translationArray.at(0).toArray();
+    if (translationGroupArray.isEmpty()) {
+        qWarning() << "Translation group array is empty";
+        return;
+    }
+
+    QJsonArray translationItemArray = translationGroupArray.at(0).toArray();
+    if (translationItemArray.isEmpty()) {
+        qWarning() << "Translation item array is empty";
+        return;
+    }
+
+    QString translation = translationItemArray.at(0).toString();
+
+    // Display the translation
+    if (!translation.isEmpty()) {
+        ui->translatedtext->setText(translation);
+    } else {
+        qWarning() << "Translation not available";
+        ui->translatedtext->setText("Translation not available");
+    }
+}
+
 

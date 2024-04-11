@@ -2,6 +2,13 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QUrl>
+#include <QtNetwork/QNetworkAccessManager>
+#include <QtNetwork/QNetworkRequest>
+#include <QtNetwork/QNetworkReply>
+#include <QtScript/QScriptEngine>
+#include <QtScript/QScriptValue>
+#include <QtScript/QScriptValueIterator>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -69,6 +76,10 @@ private slots:
     void on_tri_emp_clicked();
 
     void on_recherche_emp_clicked();
+
+    void on_translate_clicked();
+
+    void onTranslationReceived(QNetworkReply* reply);
 
 private:
     Ui::MainWindow *ui;

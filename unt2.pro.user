@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 4.11.0, 2024-03-20T13:36:48. -->
+<!-- Written by QtCreator 4.11.0, 2024-04-17T17:46:58. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -286,7 +286,9 @@
      <value type="int">14</value>
     </valuelist>
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
-    <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
+    <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes">
+     <value type="QString">Path=C:\Qt\Qt5.9.9\5.9.9\mingw53_32\lib;C:\Qt\Qt5.9.9\5.9.9\mingw53_32\bin;C:\Qt\Qt5.9.9\Tools\mingw530_32\bin;C:\Qt\Qt5.9.9\5.9.9\mingw53_32\bin;C:\Qt\Qt5.9.9\Tools\mingw530_32\bin;C:\oraclexe\app\oracle\product\11.2.0\server\bin;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\HI-TECH Software\PICC\LITE\9.60\bin;C:\Program Files\Git\cmd;C:\xampp\php;C:\ProgramData\ComposerSetup\bin;C:\instantclient-basic-nt-12.2.0.1.0;C:\oraclexe\app\oracle\admin\XE;C:\oraclexe;C:\Program Files (x86)\OpenSSL-Win32\bin;C:\Users\MSI\AppData\Local\Microsoft\WindowsApps;;C:\Users\MSI\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\MSI\AppData\Roaming\Composer\vendor\bin</value>
+    </valuelist>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:C:/Users/MSI/Desktop/SmartCare/unt2.pro</value>
     <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">C:/Users/MSI/Desktop/SmartCare/unt2.pro</value>
     <value type="QString" key="RunConfiguration.Arguments"></value>

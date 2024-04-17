@@ -237,6 +237,7 @@ QVector<QStringList> Connexion::selectAllMaterielTri(const QString& sortOrder)
 
     return result;
 }
+
 void Connexion::displayMaterielInListViewTri(QListView* listView, const QString& sortOrder)
 {
     QVector<QStringList> data = selectAllMaterielTri(sortOrder);
@@ -311,4 +312,44 @@ void Connexion::displayMaterielInListViewRecherche(QListView* listView, int id_m
 
     // Afficher le QListView
     listView->show();
+}
+
+
+bool Connexion::deletePatientsEtatNormalAndWriteToFile() {
+    // Ouvrir le fichier pour écrire
+    QFile file("filePath");
+
+    if (!file.open(QIODevice::WriteOnly | QIODevice::Text)) {
+        qDebug() << "Erreur: Impossible d'ouvrir le fichier pour l'écriture";
+        return false;
+    }
+
+    // Créer un flux texte pour écrire dans le fichier
+    QTextStream out(&file);
+
+    // Effectuer une requête pour sélectionner les patients dans l'état normal
+    QSqlQuery query;
+    if (!query.exec("SELECT * FROM patient WHERE etat = 'normal'")) {
+        qDebug() << "Erreur lors de la requête SQL:" << query.lastError().text();
+        return false;
+    }
+
+    // Parcourir les résultats de la requête et écrire les informations dans le fichier
+    while (query.next()) {
+        int id = query.value(0).toInt();
+        QString etat = query.value(1).toString();
+        out << "ID: " << id << ", Etat: " << etat << "\n";
+    }
+
+    // Fermer le fichier
+    file.close();
+
+    // Supprimer les enregistrements des patients dans l'état normal de la base de données
+    QSqlQuery deleteQuery;
+    if (!deleteQuery.exec("DELETE FROM patient WHERE etat = 'normal'")) {
+        qDebug() << "Erreur lors de la suppression des patients dans l'état normal:" << deleteQuery.lastError().text();
+        return false;
+    }
+
+    return true;
 }

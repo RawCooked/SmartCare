@@ -259,7 +259,7 @@ void MainWindow::on_pushButton_60_clicked()
 {
     QPrinter printer;
     printer.setOutputFormat(QPrinter::PdfFormat);
-    printer.setOutputFileName("C:/Users/MSI/Desktop/SmartCare - Copie/materiels.pdf");
+    printer.setOutputFileName("C:/Users/MSI/Desktop/SmartCare/xxc.pdf");
     QPainter painter;
 
     if (!painter.begin(&printer)) {
@@ -347,5 +347,7 @@ void MainWindow::on_pushButton_60_clicked()
     }
 
     painter.end();
-    QDesktopServices::openUrl(QUrl::fromLocalFile("C:/Users/MSI/Desktop/SmartCare/materiels.pdf"));
+    QDesktopServices::openUrl(QUrl::fromLocalFile("C:/Users/MSI/Desktop/SmartCare/xxc.pdf"));
 }
+
+

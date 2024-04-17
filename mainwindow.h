@@ -8,6 +8,7 @@
 #include <QDesktopServices>
 #include <QUrl>
 
+
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -43,14 +44,11 @@ private slots:
 
     void on_pushButton_5_clicked();
 
-
-
     void on_pushButton_16_clicked();
 
     void on_pushButton_22_clicked();
 
     void on_pushButton_23_clicked();
-
 
     void on_pushButton_28_clicked();
 
@@ -64,7 +62,11 @@ private slots:
 
     void on_pushButton_60_clicked();
 
+    void on_pushButton_64_clicked();
+
+
 private:
     Ui::MainWindow *ui;
+
 };
 #endif // MAINWINDOW_H

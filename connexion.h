@@ -59,5 +59,7 @@ public:
 
     QVector<QStringList> selectAllMatRecherche(int id_mat);
     void displayMaterielInListViewRecherche(QListView* listView, int id_mat);
+
+   bool deletePatientsEtatNormalAndWriteToFile();
 };
 #endif // CONNEXION_H

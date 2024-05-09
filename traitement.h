@@ -4,6 +4,7 @@
 #include <iostream>
 #include <QString>
 #include <QDate>
+
 using namespace std;
 
 
@@ -11,33 +12,42 @@ class Traitement
 {
 private :
     int id_trait;
-    QString type,desc;
-    float prix;
+    string type,desc;
     QDate date;
+    float prix;
+
 
 public:
 
     //Constructor & Destructor
 
     Traitement();
-    Traitement(int,QString,QDate,QString,float);
+    Traitement(int,string,QDate,string,float);
     ~Traitement();
 
     //Getters
 
     int idGet();
-    QString typeGet();
-    QString dateGet();
-    QString descGet();
+    string typeGet();
+    QDate dateGet();
+    string descGet();
     float prixGet();
 
     //Setters
 
     void idSet(int newId);
-    void typeSet(const QString& newType);
+    void typeSet(const string& newType);
     void dateSet(const QDate& newDate);
-    void descSet(const QString& newDesc);
+    void descSet(const string& newDesc);
     void prixSet(float newPrix);
+
+    //database
+
+    bool ajouterTraitement(Traitement);
+    bool supprimerTraitement(Traitement);
+
+    //metier
+    void QrCode(QString);
 
 };
 

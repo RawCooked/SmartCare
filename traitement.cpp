@@ -1,14 +1,23 @@
 #include "traitement.h"
+#include "connexion.h"
+#include "QZXing.h"
+#include <QImage>
 
 
 
-Traitement::Traitement(int id,QString t,QDate d,QString de,float p){
+Traitement::Traitement(int id,string t,QDate d,string de,float p){
     id_trait=id;
     type=t;
     date=d;
     desc=de;
     prix=p;
 }
+
+Traitement::Traitement()
+{
+
+}
+
 
 Traitement::~Traitement()
 {
@@ -20,15 +29,15 @@ int Traitement::idGet() {
     return id_trait;
 }
 
-QString Traitement::typeGet() {
+string Traitement::typeGet() {
     return type;
 }
 
-QString Traitement::dateGet() {
-    return date.toString("yyyy-MM-dd HH:mm:ss");
+QDate Traitement::dateGet() {
+    return date;
 }
 
-QString Traitement::descGet() {
+string Traitement::descGet() {
     return desc;
 }
 
@@ -40,7 +49,7 @@ void Traitement::idSet(int newId) {
     id_trait = newId;
 }
 
-void Traitement::typeSet(const QString& newType) {
+void Traitement::typeSet(const string& newType) {
     type = newType;
 }
 
@@ -48,11 +57,34 @@ void Traitement::dateSet(const QDate& newDate) {
     date = newDate;
 }
 
-void Traitement::descSet(const QString& newDesc) {
+void Traitement::descSet(const string& newDesc) {
     desc = newDesc;
 }
 
 void Traitement::prixSet(float newPrix) {
     prix = newPrix;
+}
+
+bool Traitement::ajouterTraitement(Traitement T){
+    Connexion c;
+
+      // Convert QDate to QString using string arguments
+      QString dateString = QString("%3-%2-%1")
+          .arg(T.date.year())
+          .arg(T.date.month(), 2, 10, QChar('0')) // Pad month with zeros
+          .arg(T.date.day(), 2, 10, QChar('0'));
+
+    return c.addTrait(T.typeGet(),dateString.toStdString(),T.descGet(),T.prixGet());
+}
+
+bool Traitement::supprimerTraitement(Traitement T){
+    Connexion c;
+    return c.deleteTrait(T.id_trait);
+}
+
+void Traitement::QrCode(QString textToEncode){
+    QZXing decoder;
+    QImage qrCodeImage = decoder.encodeData(textToEncode);
+    qrCodeImage.save("C:/Users/Administrateur/Desktop/qrcode.png");
 }
 

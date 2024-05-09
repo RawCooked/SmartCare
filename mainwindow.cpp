@@ -17,7 +17,7 @@
 #include <QDateTime> // Pour la manipulation de la date et de l'heure
 #include <QSqlQuery> // Pour exécuter des requêtes SQL
 #include <QDebug> // Pour le débogage
-
+#include "dialog.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -259,13 +259,6 @@ void MainWindow::on_radioTri_toggled(bool checked)
 
 
 
-void MainWindow::on_pushButton_13_clicked()
-{
-}
-
-
-
-
 void MainWindow::on_listView_11_clicked(const QModelIndex &index)
 {
     Connexion c;
@@ -450,7 +443,13 @@ void MainWindow::on_pushButton_37_clicked()
     else sexe ="Femme";
 
 
-    c.addPat(9,ui->agePatAdd->value(),ui->nomPatAdd->text().toStdString(),ui->pnomPatAdd->text().toStdString(),etat,sexe);
+    if(c.addPat(9,ui->agePatAdd->value(),ui->nomPatAdd->text().toStdString(),ui->pnomPatAdd->text().toStdString(),etat,sexe))
+    {
+        ui->listViewHistorique->addItem("Patient ajouté : " + ui->nomPatAdd->text() + " " + ui->pnomPatAdd->text());
+        saveHistoriqueToFile("C:/Users/pc/Desktop/unt2/historique.txt");
+
+
+    }
 
     QMessageBox::information(this, "Confirmation ", "Patient ajouté.", QMessageBox::Ok);
 
@@ -459,7 +458,12 @@ void MainWindow::on_pushButton_37_clicked()
 void MainWindow::on_pushButton_47_clicked()
 {
     Connexion c;
-    c.deletePat(ui->idPatDelete->value());
+    if(c.deletePat(ui->idPatDelete->value()))
+    {
+    ui->listViewHistorique->addItem("Patient supprimé avec ID : " + QString::number(ui->idPatDelete->value()));
+    saveHistoriqueToFile("C:/Users/pc/Desktop/unt2/historique.txt");
+
+    }
 }
 
 void MainWindow::on_UpdatePat_clicked()
@@ -478,7 +482,13 @@ void MainWindow::on_UpdatePat_clicked()
     else sexe ="Femme";
 
     Connexion c;
-    c.updatePat(ui->idPatUpdate->value(),ui->agePatAdd_2->value(),ui->nomPatAdd_2->text().toStdString(),ui->pnomPatAdd_2->text().toStdString(),etat,sexe);
+    if(c.updatePat(ui->idPatUpdate->value(),ui->agePatAdd_2->value(),ui->nomPatAdd_2->text().toStdString(),ui->pnomPatAdd_2->text().toStdString(),etat,sexe))
+    {
+        ui->listViewHistorique->addItem("Patient modifié avec ID : " + QString::number(ui->idPatUpdate->value()));
+        saveHistoriqueToFile("C:/Users/pc/Desktop/unt2/historique.txt");
+
+
+    }
 
     QMessageBox::information(this, "Confirmation ", "Patient modifié.", QMessageBox::Ok);
 
@@ -668,4 +678,73 @@ void MainWindow::on_radioTri_2_toggled(bool checked1)
         c.displayPatInListView(ui->listViewGeneral);
     }
 }
+
+
+void MainWindow::on_pushButton_23_clicked()
+{
+    Dialog d;
+    d.show();
+    d.exec();
+}
+void MainWindow::saveHistoriqueToFile(const QString& filename)
+{
+    // Ouvrir le fichier en mode écriture
+    QFile file(filename);
+    if (!file.open(QIODevice::WriteOnly | QIODevice::Text))
+    {
+        qDebug() << "Impossible d'ouvrir le fichier pour sauvegarder l'historique.";
+        return;
+    }
+
+    // Créer un flux texte pour écrire dans le fichier
+    QTextStream out(&file);
+
+    // Parcourir tous les éléments de l'historique et les écrire dans le fichier
+    for (int i = 0; i < ui->listViewHistorique->count(); ++i)
+    {
+        out << ui->listViewHistorique->item(i)->text() << "\n";
+    }
+
+    // Fermer le fichier
+    file.close();
+}
+
+void MainWindow::loadHistoriqueFromFile(const QString& filename)
+{
+    // Ouvrir le fichier en mode lecture
+    QFile file(filename);
+    if (!file.open(QIODevice::ReadOnly | QIODevice::Text))
+    {
+        qDebug() << "Impossible d'ouvrir le fichier pour charger l'historique.";
+        return;
+    }
+
+    // Créer un flux texte pour lire depuis le fichier
+    QTextStream in(&file);
+
+    // Effacer les éléments actuels de la QListWidget
+    ui->listViewHistorique->clear();
+
+    // Lire chaque ligne du fichier et ajouter son contenu à la QListWidget
+    while (!in.atEnd())
+    {
+        QString line = in.readLine();
+        ui->listViewHistorique->addItem(line);
+    }
+
+    // Fermer le fichier
+    file.close();
+}
+
+void MainWindow::on_pushButton_63_clicked()
+{
+    // Charger les données depuis le fichier avant d'afficher
+
+    loadHistoriqueFromFile("C:/Users/pc/Desktop/unt2/historique.txt");
+
+    // Afficher les notifications dans la QListWidget
+    Connexion c;
+    c.displayNotificationsInListWidget(ui->listViewHistorique);
+}
+
 

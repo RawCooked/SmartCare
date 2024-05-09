@@ -4,6 +4,7 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets widgets printsupport
 
 CONFIG += c++11 staticlib qzxing_multimedia
 
+greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 
 
@@ -21,18 +22,23 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES +=  \
+    captcha.cpp \
     connexion.cpp \
+    dialog.cpp \
     main.cpp \
     mainwindow.cpp \
     patient.cpp \
     traitement.cpp
 
 HEADERS += \
+    captcha.h \
     connexion.h \
+    dialog.h \
     mainwindow.h \
     patient.h \
     traitement.h
 FORMS += \
+    dialog.ui \
     mainwindow.ui
 
 include($$PWD/QtRptProject/QtRPT/QtRPT.pri)

@@ -1,0 +1,9 @@
+Patient ajouté : zzz eeeee
+Patient modifié avec ID : 16
+Patient supprimé avec ID : 16
+Patient ajouté : ss qq
+Patient modifié avec ID : 16
+Patient supprimé avec ID : 16
+Patient ajouté : kkjd HHHH
+Patient modifié avec ID : 16
+Patient supprimé avec ID : 16

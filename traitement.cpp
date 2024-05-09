@@ -1,7 +1,7 @@
 #include "traitement.h"
 #include "connexion.h"
-#include <QImage>
 #include "QZXing.h"
+#include <QImage>
 
 
 

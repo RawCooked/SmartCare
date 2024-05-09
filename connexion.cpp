@@ -243,6 +243,8 @@ bool Connexion::addPat(int id_p, int age, std::string nom_p, std::string prenom_
         std::cout << "Error adding Patient: " << query.lastError().text().toStdString() << std::endl;
         return false;
     }
+
+
 }
 bool Connexion::updatePat(int id_p, int age, std::string nom_p, std::string prenom_p, std::string etat, std::string sexe_p)
 {
@@ -397,4 +399,22 @@ void Connexion::displayPatInListView(QListView* listView)
     // Show the QListView
     listView->show();
 }
+
+void Connexion::displayNotificationsInListWidget(QListWidget* listWidget) {
+
+    // Iterate through the stored notification data and add it to the listWidget
+    for (const QStringList& record : notificationData) {
+        QString itemText = record.join(", "); // You can customize the separator as needed
+        listWidget->addItem(itemText);
+    }
+
+    // Optionally, set other properties or customize the appearance of the listWidget
+    listWidget->setViewMode(QListView::ListMode);
+
+    // Show the listWidget
+    listWidget->show();
+}
+
+
+
 

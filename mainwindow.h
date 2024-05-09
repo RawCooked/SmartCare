@@ -56,7 +56,6 @@ private slots:
 
     void on_DashboardButton_clicked();
 
-    void on_pushButton_13_clicked();
 
 
 
@@ -102,7 +101,24 @@ private slots:
 
     void on_radioTri_2_toggled(bool checked1);
 
+    void on_pushButton_23_clicked();
+
+
+
+    void on_pushButton_63_clicked();
+    void saveHistoriqueToFile(const QString& filename);
+    void loadHistoriqueFromFile(const QString& filename);
+
+
+
+
+
+
 private:
     Ui::MainWindow *ui;
+
+
+
+
 };
 #endif // MAINWINDOW_H

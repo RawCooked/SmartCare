@@ -6,12 +6,16 @@
 #include <QStringListModel>
 #include <QListView>
 #include "traitement.h"
+#include <QListWidget> // Ajoutez cette ligne pour inclure QListWidget
+#include <QVector>
 
 const QString databaseName = "test-bd";
 
 
 class Connexion
 {
+    QVector<QStringList> notificationData;
+
 private:
     QSqlDatabase db;
 
@@ -43,6 +47,7 @@ public:
     QVector<QStringList> selectAllPatById();
     QVector<QStringList> selectAllPatTri(const QString& sortOrder);
     void displayPatInListView(QListView* listView);
+    void displayNotificationsInListWidget(QListWidget* listWidget);
 
 
 };

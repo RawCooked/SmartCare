@@ -16,17 +16,22 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     connexion.cpp \
+    mail.cpp \
     main.cpp \
     mainwindow.cpp \
     materiel.cpp \
+    smtp.cpp \
     traitement.cpp
 
 HEADERS += \
     connexion.h \
+    mail.h \
     mainwindow.h \
     materiel.h \
+    smtp.h \
     traitement.h
 FORMS += \
+    mail.ui \
     mainwindow.ui
 
 # Default rules for deployment.

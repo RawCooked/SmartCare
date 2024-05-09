@@ -7,6 +7,7 @@
 #include <QTextDocument>
 #include <QDesktopServices>
 #include <QUrl>
+#include "smtp.h"
 
 
 QT_BEGIN_NAMESPACE
@@ -62,8 +63,13 @@ private slots:
 
     void on_pushButton_60_clicked();
 
-    void on_pushButton_64_clicked();
 
+    void sendMail();
+
+    void mailSent(QString);
+
+
+    void on_pushButton_11_clicked();
 
 private:
     Ui::MainWindow *ui;
